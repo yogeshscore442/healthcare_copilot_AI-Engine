@@ -22,6 +22,7 @@ from ai_engine import (
     check_drug_interactions,
     export_fhir_json,
     extract_record,
+    calculate_prescription_savings,
     generate_audio,
     get_browser_speech_html,
     get_drug_advisories,
@@ -325,9 +326,10 @@ else:
         )
 
     with right_col:
-        tab_tests, tab_meds, tab_diag, tab_summary, tab_voice, tab_fhir = st.tabs([
+        tab_tests, tab_meds, tab_savings, tab_diag, tab_summary, tab_voice, tab_fhir = st.tabs([
             "🧪 Lab Results",
             "💊 Medications",
+            "💰 Jan Aushadhi Savings",
             "📋 Diagnoses",
             "📖 Summaries",
             "🎙️ Voice Copilot",
@@ -419,7 +421,60 @@ else:
                     for adv in advisories:
                         st.info(f"**{adv['medicine'].title()}:** {adv['schedule_advice']}\n\n*{adv['schedule_advice_ta']}*")
 
-        # ── TAB 3: Diagnoses & ICD-10 ──
+        # ── TAB 3: Jan Aushadhi Generic Savings ──
+        with tab_savings:
+            st.markdown("### 💰 PMBJP Jan Aushadhi Generic Affordability")
+            st.caption("Pradhan Mantri Bhartiya Janaushadhi Pariyojana price comparison for branded prescription items.")
+
+            meds = record.get("medicines", [])
+            savings_data = record.get("cost_savings")
+            if not savings_data and meds:
+                savings_data = calculate_prescription_savings(meds)
+
+            if not savings_data or savings_data.get("matched_count", 0) == 0:
+                st.info("No matching branded medications found in PMBJP Jan Aushadhi catalog for this document.")
+            else:
+                m_cost = savings_data.get("total_market_cost_inr", 0.0)
+                j_cost = savings_data.get("total_jan_aushadhi_cost_inr", 0.0)
+                tot_save = savings_data.get("total_savings_inr", 0.0)
+                pct_save = savings_data.get("savings_percentage", 0.0)
+
+                col_s1, col_s2, col_s3, col_s4 = st.columns(4)
+                with col_s1:
+                    st.metric("Total Market Cost", f"₹ {m_cost:.1f}")
+                with col_s2:
+                    st.metric("Jan Aushadhi Cost", f"₹ {j_cost:.1f}")
+                with col_s3:
+                    st.metric("Estimated Savings", f"₹ {tot_save:.1f}")
+                with col_s4:
+                    st.metric("Discount %", f"{pct_save:.1f}% 🔥")
+
+                st.markdown("#### 💊 Branded vs Generic Equivalent Comparison")
+                for alt in savings_data.get("alternatives", []):
+                    st.markdown(
+                        f"""
+                        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; margin-bottom: 8px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 700; color: #0f172a; font-size: 1rem;">{alt['brand']} ({alt['strength']})</span>
+                                <span style="background: #dcfce7; color: #166534; font-weight: 700; padding: 2px 8px; border-radius: 4px; font-size: 0.85rem;">
+                                    Saves ₹{alt['savings_inr']} ({alt['savings_percentage']}%)
+                                </span>
+                            </div>
+                            <div style="color: #2563eb; font-size: 0.9rem; margin-top: 4px;">
+                                <b>Govt Generic Equivalent:</b> {alt['generic_equivalent']}
+                            </div>
+                            <div style="font-size: 0.85rem; color: #64748b; margin-top: 4px;">
+                                Market: <strike>₹{alt['market_price_inr']}</strike> &nbsp;➔&nbsp;
+                                <b style="color: #059669;">Jan Aushadhi: ₹{alt['jan_aushadhi_price_inr']}</b> ({alt['unit']})
+                            </div>
+                        </div>
+                        """,
+                        unsafe_allow_html=True,
+                    )
+
+                st.warning(f"ℹ️ {savings_data.get('advisory')}\n\n*{savings_data.get('advisory_ta')}*")
+
+        # ── TAB 4: Diagnoses & ICD-10 ──
         with tab_diag:
             diagnoses = record.get("diagnoses", [])
             if not diagnoses:

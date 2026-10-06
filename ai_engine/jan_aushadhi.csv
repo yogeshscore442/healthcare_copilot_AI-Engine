@@ -1,0 +1,66 @@
+brand,generic,strength,market_price_inr,jan_aushadhi_price_inr,unit,source,needs_clinical_review
+Augmentin 625,Amoxicillin and Clavulanate,625 mg,205.0,55.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Clavam 625,Amoxicillin and Clavulanate,625 mg,200.0,55.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Moxikind-CV 625,Amoxicillin and Clavulanate,625 mg,190.0,55.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Pan 40,Pantoprazole,40 mg,155.0,22.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Pantocid 40,Pantoprazole,40 mg,160.0,22.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Pantodac 40,Pantoprazole,40 mg,145.0,22.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Omez 20,Omeprazole,20 mg,75.0,15.0,15 capsules,PMBJP / NPPA Price List 2024,false
+Rablet 20,Rabeprazole,20 mg,120.0,18.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Glycomet 500,Metformin,500 mg,48.0,12.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Glycomet GP 1,Metformin + Glimepiride,500mg+1mg,115.0,25.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Glycomet GP 2,Metformin + Glimepiride,500mg+2mg,130.0,28.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Januvia 100,Sitagliptin,100 mg,430.0,75.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Galvus 50,Vildagliptin,50 mg,260.0,45.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Telma 40,Telmisartan,40 mg,140.0,20.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Telma H,Telmisartan + Hydrochlorothiazide,40mg+12.5mg,175.0,28.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Telmikind 40,Telmisartan,40 mg,95.0,20.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Cilacar 10,Cilnidipine,10 mg,130.0,24.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Amlong 5,Amlodipine,5 mg,45.0,9.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Atorva 10,Atorvastatin,10 mg,110.0,18.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Atorva 20,Atorvastatin,20 mg,185.0,26.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Atorva 40,Atorvastatin,40 mg,320.0,42.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Storvas 10,Atorvastatin,10 mg,95.0,18.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Lipaglyn,Saroglitazar,4 mg,290.0,85.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Rosuvas 10,Rosuvastatin,10 mg,195.0,25.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Rosuvas 20,Rosuvastatin,20 mg,310.0,38.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Ecosprin 75,Aspirin,75 mg,12.0,5.0,14 tablets,PMBJP / NPPA Price List 2024,false
+Ecosprin 150,Aspirin,150 mg,15.0,6.0,14 tablets,PMBJP / NPPA Price List 2024,false
+Clopilet 75,Clopidogrel,75 mg,115.0,22.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Deplatt 75,Clopidogrel,75 mg,105.0,22.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Thyronorm 50,Levothyroxine,50 mcg,140.0,35.0,100 tablets,PMBJP / NPPA Price List 2024,false
+Thyronorm 100,Levothyroxine,100 mcg,170.0,42.0,100 tablets,PMBJP / NPPA Price List 2024,false
+Eltroxin 50,Levothyroxine,50 mcg,135.0,35.0,100 tablets,PMBJP / NPPA Price List 2024,false
+Eltroxin 100,Levothyroxine,100 mcg,165.0,42.0,100 tablets,PMBJP / NPPA Price List 2024,false
+Dolo 650,Paracetamol,650 mg,34.0,10.0,15 tablets,PMBJP / NPPA Price List 2024,false
+Calpol 500,Paracetamol,500 mg,22.0,8.0,15 tablets,PMBJP / NPPA Price List 2024,false
+Calpol 650,Paracetamol,650 mg,32.0,10.0,15 tablets,PMBJP / NPPA Price List 2024,false
+Combiflam,Ibuprofen + Paracetamol,400mg+325mg,45.0,14.0,20 tablets,PMBJP / NPPA Price List 2024,false
+Voveran 50,Diclofenac,50 mg,65.0,12.0,15 tablets,PMBJP / NPPA Price List 2024,false
+Zerodol-SP,Aceclofenac + Paracetamol + Serratiopeptidase,100mg+325mg+15mg,125.0,32.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Allegra 120,Fexofenadine,120 mg,180.0,30.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Allegra 180,Fexofenadine,180 mg,240.0,40.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Montair-LC,Montelukast + Levocetirizine,10mg+5mg,210.0,35.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Montek-LC,Montelukast + Levocetirizine,10mg+5mg,195.0,35.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Azithral 500,Azithromycin,500 mg,130.0,38.0,5 tablets,PMBJP / NPPA Price List 2024,false
+Azee 500,Azithromycin,500 mg,125.0,38.0,5 tablets,PMBJP / NPPA Price List 2024,false
+Cifran 500,Ciprofloxacin,500 mg,55.0,18.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Ciplox 500,Ciprofloxacin,500 mg,52.0,18.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Taxim-O 200,Cefixime,200 mg,115.0,32.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Mahacef 200,Cefixime,200 mg,110.0,32.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Shelcal 500,Calcium + Vitamin D3,500mg+250IU,135.0,25.0,15 tablets,PMBJP / NPPA Price List 2024,false
+Becadexamin,Multivitamin + Minerals,-,50.0,16.0,30 capsules,PMBJP / NPPA Price List 2024,false
+Neurobion Forte,Vitamin B-Complex + B12,-,42.0,14.0,30 tablets,PMBJP / NPPA Price List 2024,false
+Uprise-D3 60K,Cholecalciferol (Vitamin D3),60000 IU,140.0,28.0,4 capsules,PMBJP / NPPA Price List 2024,false
+Calcirol 60K,Cholecalciferol (Vitamin D3),60000 IU,145.0,28.0,4 sachets,PMBJP / NPPA Price List 2024,false
+Livogen-Z,Ferrous Fumarate + Folic Acid,-,85.0,22.0,15 capsules,PMBJP / NPPA Price List 2024,false
+Duphaston 10,Dydrogesterone,10 mg,780.0,190.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Eliquis 5,Apixaban,5 mg,920.0,220.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Xarelto 20,Rivaroxaban,20 mg,1150.0,260.0,14 tablets,PMBJP / NPPA Price List 2024,false
+Brilinta 90,Ticagrelor,90 mg,680.0,160.0,14 tablets,PMBJP / NPPA Price List 2024,false
+Concor 5,Bisoprolol,5 mg,115.0,22.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Betaloc 50,Metoprolol,50 mg,95.0,20.0,15 tablets,PMBJP / NPPA Price List 2024,false
+Cardivas 3.125,Carvedilol,3.125 mg,55.0,12.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Aldactone 25,Spironolactone,25 mg,62.0,15.0,15 tablets,PMBJP / NPPA Price List 2024,false
+Lasix 40,Furosemide,40 mg,16.0,6.0,10 tablets,PMBJP / NPPA Price List 2024,false
+Dytor 10,Torsemide,10 mg,85.0,18.0,15 tablets,PMBJP / NPPA Price List 2024,false

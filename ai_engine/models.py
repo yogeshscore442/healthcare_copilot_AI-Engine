@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import re
 import uuid
-from typing import List, Literal, Optional
+from typing import Any, Dict, List, Literal, Optional
 
 from pydantic import BaseModel, Field, field_validator, model_validator
 
@@ -118,6 +118,8 @@ class HealthRecord(BaseModel):
     diagnoses: List[DiagnosisRecord] = Field(default_factory=list)
     summary_en: Optional[str] = None
     summary_ta: Optional[str] = None
+    safety_alerts: List[Dict[str, Any]] = Field(default_factory=list)  # additive extension
+    cost_savings: Optional[Dict[str, Any]] = None  # additive extension
     needs_review: List[str] = Field(default_factory=list)
     disclaimer: str = DISCLAIMER
     error: Optional[ErrorRecord] = None

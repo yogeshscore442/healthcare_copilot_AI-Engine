@@ -23,6 +23,7 @@ from .extract import extract_from_file
 from .models import make_error_record, DISCLAIMER
 from .summarize import build_summaries
 from .interactions import check_drug_interactions, get_drug_advisories
+from .affordability import calculate_prescription_savings
 from .fhir import record_to_fhir_bundle, export_fhir_json
 from .voice import generate_audio, get_browser_speech_html
 
@@ -30,6 +31,7 @@ logger = logging.getLogger(__name__)
 
 __all__ = [
     "extract_record",
+    "calculate_prescription_savings",
     "record_to_fhir_bundle",
     "export_fhir_json",
     "check_drug_interactions",
@@ -37,7 +39,7 @@ __all__ = [
     "generate_audio",
     "get_browser_speech_html",
 ]
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 
 def extract_record(
@@ -89,11 +91,23 @@ def extract_record(
 
         # ── Clinical Drug Safety & Advisories ────────────────────────────────
         if record.get("medicines"):
-            record["safety_alerts"] = check_drug_interactions(record["medicines"])
-            record["drug_advisories"] = get_drug_advisories(record["medicines"])
+            try:
+                record["safety_alerts"] = check_drug_interactions(record["medicines"])
+                record["drug_advisories"] = get_drug_advisories(record["medicines"])
+            except Exception as e:
+                logger.warning("Safety alerts check skipped: %s", e)
+                record["safety_alerts"] = []
+                record["drug_advisories"] = []
+            
+            try:
+                record["cost_savings"] = calculate_prescription_savings(record["medicines"])
+            except Exception as e:
+                logger.warning("Cost savings calculation skipped: %s", e)
+                record["cost_savings"] = None
         else:
             record["safety_alerts"] = []
             record["drug_advisories"] = []
+            record["cost_savings"] = None
 
         # ── Cache result ─────────────────────────────────────────────────────
         set_cached(file_path, record)
@@ -132,6 +146,13 @@ def _load_mock(mime: str, file_path: str) -> dict:
             data = json.load(f)
         import uuid
         data["record_id"] = str(uuid.uuid4())  # fresh ID each call
+        if data.get("medicines"):
+            try:
+                data["safety_alerts"] = check_drug_interactions(data["medicines"])
+                data["drug_advisories"] = get_drug_advisories(data["medicines"])
+                data["cost_savings"] = calculate_prescription_savings(data["medicines"])
+            except Exception:
+                pass
         logger.info("USE_MOCK_AI=true — returning %s", mock_file.name)
         return data
     except Exception as e:

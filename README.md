@@ -91,6 +91,7 @@ Automated evaluation against 12 realistic synthetic clinical documents (`eval.py
 - **LOINC (Logical Observation Identifiers Names and Codes):** 70+ laboratory parameters covering Hematology (CBC), Renal/Kidney (KFT), Liver Function (LFT), Lipid Profile, Thyroid Panel, Electrolytes, Glycemic/Diabetes, Cardiac Enzymes, Urinalysis, and Inflammatory Markers (`ai_engine/reference_ranges.json`).
 - **Comprehensive Test Aliases:** 60+ variations and OCR misspellings mapped to canonical test keys (`ai_engine/aliases.json`).
 - **WHO Essential Medicines & Indian NLEM / Jan Aushadhi:** 360+ common pharmaceutical formulations, brand-to-generic mappings, and standard strengths spanning cardiology, endocrinology, neurology, gastroenterology, antibiotics, analgesics, and respiratory medicines (`ai_engine/brands.csv`).
+- **PMBJP Jan Aushadhi Government Pricing Registry:** Official pricing comparisons for branded drugs vs Jan Aushadhi generic equivalents with source provenance from NPPA/PMBJP (`ai_engine/jan_aushadhi.csv`).
 - **ICD-10-CM Classification:** 130+ clinical condition and diagnostic coding taxonomy for ABDM / FHIR harmonization covering infectious, cardiovascular, endocrine, respiratory, renal, and oncology codes (`ai_engine/icd10.json`).
 - **Standard Medical Abbreviations:** Latin & Indian prescription dosage syntax (`1-0-1`, `OD`, `BD`, `TDS`, `QID`, `HS`, `SOS`, `before_food`, `after_food`, `empty_stomach`).
 
