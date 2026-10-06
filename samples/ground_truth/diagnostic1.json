@@ -1,0 +1,30 @@
+{
+  "doc_type": "diagnostic_report",
+  "doc_date": "2026-03-18",
+  "collection_date": null,
+  "follow_up_date": null,
+  "language": "en",
+  "patient_name_present": true,
+  "allergies": [],
+  "medicines": [],
+  "tests": [
+    {
+      "name": "Chest X-Ray PA View",
+      "loinc": null,
+      "value": null,
+      "value_text": "Normal chest radiograph (PA View). No active cardiopulmonary disease detected.",
+      "unit": null,
+      "ref_low": null,
+      "ref_high": null,
+      "flag": "NORMAL",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    }
+  ],
+  "diagnoses": [],
+  "needs_review": [],
+  "disclaimer": "This is AI-generated information to help you understand your records. It is not a diagnosis or medical advice. Please consult your doctor.",
+  "error": null
+}

@@ -1,0 +1,77 @@
+{
+  "doc_type": "lab_report",
+  "doc_date": "2026-03-12",
+  "collection_date": "2026-03-12",
+  "follow_up_date": null,
+  "language": "en",
+  "patient_name_present": true,
+  "allergies": [],
+  "medicines": [],
+  "tests": [
+    {
+      "name": "Total Cholesterol",
+      "loinc": null,
+      "value": 248.0,
+      "value_text": null,
+      "unit": "mg/dL",
+      "ref_low": null,
+      "ref_high": 200.0,
+      "flag": "HIGH",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name": "Triglycerides",
+      "loinc": null,
+      "value": 210.0,
+      "value_text": null,
+      "unit": "mg/dL",
+      "ref_low": null,
+      "ref_high": 150.0,
+      "flag": "HIGH",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name": "HDL",
+      "loinc": null,
+      "value": 36.0,
+      "value_text": null,
+      "unit": "mg/dL",
+      "ref_low": 40.0,
+      "ref_high": null,
+      "flag": "LOW",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name": "LDL",
+      "loinc": null,
+      "value": 165.0,
+      "value_text": null,
+      "unit": "mg/dL",
+      "ref_low": null,
+      "ref_high": 100.0,
+      "flag": "HIGH",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    }
+  ],
+  "diagnoses": [],
+  "needs_review": [
+    "tests[0]",
+    "tests[1]",
+    "tests[2]",
+    "tests[3]"
+  ],
+  "disclaimer": "This is AI-generated information to help you understand your records. It is not a diagnosis or medical advice. Please consult your doctor.",
+  "error": null
+}

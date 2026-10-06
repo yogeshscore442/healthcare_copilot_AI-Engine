@@ -1,0 +1,91 @@
+{
+  "doc_type": "lab_report",
+  "doc_date": "2026-03-10",
+  "collection_date": "2026-03-10",
+  "follow_up_date": null,
+  "language": "en",
+  "patient_name_present": true,
+  "allergies": [],
+  "medicines": [],
+  "tests": [
+    {
+      "name": "Haemoglobin",
+      "loinc": null,
+      "value": 10.2,
+      "value_text": null,
+      "unit": "g/dL",
+      "ref_low": 13.5,
+      "ref_high": 17.5,
+      "flag": "LOW",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name": "WBC",
+      "loinc": null,
+      "value": 12.8,
+      "value_text": null,
+      "unit": "10\u00b3/\u00b5L",
+      "ref_low": 4.0,
+      "ref_high": 11.0,
+      "flag": "HIGH",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name": "Platelets",
+      "loinc": null,
+      "value": 240.0,
+      "value_text": null,
+      "unit": "10\u00b3/\u00b5L",
+      "ref_low": 150.0,
+      "ref_high": 400.0,
+      "flag": "NORMAL",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name": "RBC",
+      "loinc": null,
+      "value": 4.1,
+      "value_text": null,
+      "unit": "10\u2076/\u00b5L",
+      "ref_low": 4.5,
+      "ref_high": 5.9,
+      "flag": "LOW",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name": "Hematocrit",
+      "loinc": null,
+      "value": 32.5,
+      "value_text": null,
+      "unit": "%",
+      "ref_low": 38.0,
+      "ref_high": 50.0,
+      "flag": "LOW",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    }
+  ],
+  "diagnoses": [],
+  "needs_review": [
+    "tests[0]",
+    "tests[1]",
+    "tests[3]",
+    "tests[4]"
+  ],
+  "disclaimer": "This is AI-generated information to help you understand your records. It is not a diagnosis or medical advice. Please consult your doctor.",
+  "error": null
+}

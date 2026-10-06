@@ -1,0 +1,63 @@
+{
+  "doc_type": "discharge_summary",
+  "doc_date": "2026-03-16",
+  "collection_date": null,
+  "follow_up_date": "2026-03-23",
+  "language": "en",
+  "patient_name_present": true,
+  "allergies": [],
+  "medicines": [
+    {
+      "name_raw": "Zifi 200",
+      "generic": "Cefixime",
+      "strength": "200 mg",
+      "schedule_raw": "1-0-1 after food",
+      "schedule_parsed": [
+        "morning",
+        "night"
+      ],
+      "food_instruction": "after_food",
+      "duration_days": 5,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name_raw": "Combiflam",
+      "generic": "Ibuprofen + Paracetamol",
+      "strength": "400 mg + 325 mg",
+      "schedule_raw": "1-0-1 after food",
+      "schedule_parsed": [
+        "morning",
+        "night"
+      ],
+      "food_instruction": "after_food",
+      "duration_days": 5,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name_raw": "Pan-D",
+      "generic": "Pantoprazole + Domperidone",
+      "strength": "40 mg + 10 mg",
+      "schedule_raw": "1-0-0 before food",
+      "schedule_parsed": [
+        "morning"
+      ],
+      "food_instruction": "before_food",
+      "duration_days": 7,
+      "confidence": 1.0,
+      "bbox": null
+    }
+  ],
+  "tests": [],
+  "diagnoses": [
+    {
+      "text": "Acute Appendicitis - Post Laparoscopic Appendectomy",
+      "confidence": 1.0,
+      "icd10": "K35.80"
+    }
+  ],
+  "needs_review": [],
+  "disclaimer": "This is AI-generated information to help you understand your records. It is not a diagnosis or medical advice. Please consult your doctor.",
+  "error": null
+}

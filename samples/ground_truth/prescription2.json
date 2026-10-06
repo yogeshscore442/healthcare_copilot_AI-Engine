@@ -1,0 +1,76 @@
+{
+  "doc_type": "prescription",
+  "doc_date": "2026-03-18",
+  "collection_date": null,
+  "follow_up_date": "2026-03-23",
+  "language": "en",
+  "patient_name_present": true,
+  "allergies": [],
+  "medicines": [
+    {
+      "name_raw": "Augmentin 625",
+      "generic": "Amoxicillin + Clavulanate",
+      "strength": "500 mg + 125 mg",
+      "schedule_raw": "1-0-1 after food",
+      "schedule_parsed": [
+        "morning",
+        "night"
+      ],
+      "food_instruction": "after_food",
+      "duration_days": 5,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name_raw": "Pan-D",
+      "generic": "Pantoprazole + Domperidone",
+      "strength": "40 mg + 10 mg",
+      "schedule_raw": "1-0-0 before food",
+      "schedule_parsed": [
+        "morning"
+      ],
+      "food_instruction": "before_food",
+      "duration_days": 5,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name_raw": "Dolo 650",
+      "generic": "Paracetamol",
+      "strength": "650 mg",
+      "schedule_raw": "1-0-1 after food",
+      "schedule_parsed": [
+        "morning",
+        "night"
+      ],
+      "food_instruction": "after_food",
+      "duration_days": 3,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name_raw": "Cetirizine 10",
+      "generic": "Cetirizine",
+      "strength": "10 mg",
+      "schedule_raw": "0-0-1 at night",
+      "schedule_parsed": [
+        "night"
+      ],
+      "food_instruction": null,
+      "duration_days": 5,
+      "confidence": 1.0,
+      "bbox": null
+    }
+  ],
+  "tests": [],
+  "diagnoses": [
+    {
+      "text": "Acute Upper Respiratory Tract Infection",
+      "confidence": 1.0,
+      "icd10": "J06.9"
+    }
+  ],
+  "needs_review": [],
+  "disclaimer": "This is AI-generated information to help you understand your records. It is not a diagnosis or medical advice. Please consult your doctor.",
+  "error": null
+}

@@ -1,0 +1,90 @@
+{
+  "doc_type": "lab_report",
+  "doc_date": "2026-03-15",
+  "collection_date": "2026-03-15",
+  "follow_up_date": null,
+  "language": "en",
+  "patient_name_present": true,
+  "allergies": [],
+  "medicines": [],
+  "tests": [
+    {
+      "name": "Creatinine",
+      "loinc": null,
+      "value": 1.6,
+      "value_text": null,
+      "unit": "mg/dL",
+      "ref_low": 0.6,
+      "ref_high": 1.2,
+      "flag": "HIGH",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name": "Urea",
+      "loinc": null,
+      "value": 38.0,
+      "value_text": null,
+      "unit": "mg/dL",
+      "ref_low": 7.0,
+      "ref_high": 20.0,
+      "flag": "HIGH",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name": "TSH",
+      "loinc": null,
+      "value": 6.8,
+      "value_text": null,
+      "unit": "mIU/L",
+      "ref_low": 0.4,
+      "ref_high": 4.0,
+      "flag": "HIGH",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name": "Sodium",
+      "loinc": null,
+      "value": 139.0,
+      "value_text": null,
+      "unit": "mEq/L",
+      "ref_low": 136.0,
+      "ref_high": 145.0,
+      "flag": "NORMAL",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name": "Potassium",
+      "loinc": null,
+      "value": 4.3,
+      "value_text": null,
+      "unit": "mEq/L",
+      "ref_low": 3.5,
+      "ref_high": 5.1,
+      "flag": "NORMAL",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    }
+  ],
+  "diagnoses": [],
+  "needs_review": [
+    "tests[0]",
+    "tests[1]",
+    "tests[2]"
+  ],
+  "disclaimer": "This is AI-generated information to help you understand your records. It is not a diagnosis or medical advice. Please consult your doctor.",
+  "error": null
+}

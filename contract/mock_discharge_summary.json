@@ -1,0 +1,54 @@
+{
+  "record_id": "a1b2c3d4-0001-0001-0001-000000000003",
+  "doc_type": "discharge_summary",
+  "doc_date": "2024-08-30",
+  "collection_date": null,
+  "follow_up_date": "2024-09-06",
+  "language": "en",
+  "patient_name_present": true,
+  "allergies": [],
+  "medicines": [
+    {
+      "name_raw": "Tab Ondansetron 4 mg",
+      "generic": "Ondansetron",
+      "strength": "4 mg",
+      "schedule_raw": "1-1-1",
+      "schedule_parsed": ["morning", "afternoon", "night"],
+      "food_instruction": null,
+      "duration_days": 5,
+      "confidence": 0.92,
+      "bbox": null
+    },
+    {
+      "name_raw": "ORS Sachets",
+      "generic": "Oral Rehydration Salts",
+      "strength": null,
+      "schedule_raw": "SOS",
+      "schedule_parsed": [],
+      "food_instruction": null,
+      "duration_days": 5,
+      "confidence": 0.88,
+      "bbox": null
+    },
+    {
+      "name_raw": "Tab Pantoprazole 40 mg",
+      "generic": "Pantoprazole",
+      "strength": "40 mg",
+      "schedule_raw": "OD AC",
+      "schedule_parsed": ["morning"],
+      "food_instruction": "before_food",
+      "duration_days": 7,
+      "confidence": 0.91,
+      "bbox": null
+    }
+  ],
+  "tests": [],
+  "diagnoses": [
+    {"text": "Acute Gastroenteritis", "confidence": 0.90}
+  ],
+  "summary_en": "This discharge summary lists medicines prescribed at discharge and a follow-up date of 2024-09-06. Please attend the follow-up appointment and discuss your recovery with your doctor.",
+  "summary_ta": null,
+  "needs_review": [],
+  "disclaimer": "This is AI-generated information to help you understand your records. It is not a diagnosis or medical advice. Please consult your doctor.",
+  "error": null
+}

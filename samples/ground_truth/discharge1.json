@@ -1,0 +1,63 @@
+{
+  "doc_type": "discharge_summary",
+  "doc_date": "2026-03-11",
+  "collection_date": null,
+  "follow_up_date": "2026-03-18",
+  "language": "en",
+  "patient_name_present": true,
+  "allergies": [],
+  "medicines": [
+    {
+      "name_raw": "Rablet 20",
+      "generic": "Rabeprazole",
+      "strength": "20 mg",
+      "schedule_raw": "1-0-0 before food",
+      "schedule_parsed": [
+        "morning"
+      ],
+      "food_instruction": "before_food",
+      "duration_days": 14,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name_raw": "Ondem 4",
+      "generic": "Ondansetron",
+      "strength": "4 mg",
+      "schedule_raw": "1-0-1 before food",
+      "schedule_parsed": [
+        "morning",
+        "night"
+      ],
+      "food_instruction": "before_food",
+      "duration_days": 3,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name_raw": "Sporlac",
+      "generic": "Lactobacillus Sporogenes",
+      "strength": null,
+      "schedule_raw": "1-0-1 after food",
+      "schedule_parsed": [
+        "morning",
+        "night"
+      ],
+      "food_instruction": "after_food",
+      "duration_days": 7,
+      "confidence": 1.0,
+      "bbox": null
+    }
+  ],
+  "tests": [],
+  "diagnoses": [
+    {
+      "text": "Acute Infectious Gastroenteritis with Moderate Dehydration",
+      "confidence": 1.0,
+      "icd10": "A09"
+    }
+  ],
+  "needs_review": [],
+  "disclaimer": "This is AI-generated information to help you understand your records. It is not a diagnosis or medical advice. Please consult your doctor.",
+  "error": null
+}

@@ -1,0 +1,62 @@
+{
+  "doc_type": "lab_report",
+  "doc_date": "2026-03-14",
+  "collection_date": "2026-03-14",
+  "follow_up_date": null,
+  "language": "en",
+  "patient_name_present": true,
+  "allergies": [],
+  "medicines": [],
+  "tests": [
+    {
+      "name": "Fasting Glucose",
+      "loinc": null,
+      "value": 142.0,
+      "value_text": null,
+      "unit": "mg/dL",
+      "ref_low": 70.0,
+      "ref_high": 100.0,
+      "flag": "HIGH",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name": "HbA1c",
+      "loinc": null,
+      "value": 8.4,
+      "value_text": null,
+      "unit": "%",
+      "ref_low": 4.0,
+      "ref_high": 5.6,
+      "flag": "HIGH",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name": "Random Glucose",
+      "loinc": null,
+      "value": 220.0,
+      "value_text": null,
+      "unit": "mg/dL",
+      "ref_low": 70.0,
+      "ref_high": 140.0,
+      "flag": "HIGH",
+      "explanation_en": null,
+      "explanation_ta": null,
+      "confidence": 1.0,
+      "bbox": null
+    }
+  ],
+  "diagnoses": [],
+  "needs_review": [
+    "tests[0]",
+    "tests[1]",
+    "tests[2]"
+  ],
+  "disclaimer": "This is AI-generated information to help you understand your records. It is not a diagnosis or medical advice. Please consult your doctor.",
+  "error": null
+}

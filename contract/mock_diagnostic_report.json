@@ -1,0 +1,33 @@
+{
+  "record_id": "a1b2c3d4-0001-0001-0001-000000000004",
+  "doc_type": "diagnostic_report",
+  "doc_date": "2024-09-10",
+  "collection_date": "2024-09-10",
+  "follow_up_date": null,
+  "language": "en",
+  "patient_name_present": true,
+  "allergies": [],
+  "medicines": [],
+  "tests": [
+    {
+      "name": "Chest X-Ray (PA View)",
+      "loinc": null,
+      "value": null,
+      "value_text": "Findings: Mild cardiomegaly noted. Lung fields are clear. No active consolidation or pleural effusion seen. Costophrenic angles are clear. Bony thorax intact. Impression: Mild cardiomegaly. Recommend clinical correlation.",
+      "unit": null,
+      "ref_low": null,
+      "ref_high": null,
+      "flag": "UNKNOWN",
+      "explanation_en": "The report mentions mild cardiomegaly and recommends clinical correlation. No consolidation or effusion is noted. Please discuss this finding with your doctor.",
+      "explanation_ta": null,
+      "confidence": 0.90,
+      "bbox": null
+    }
+  ],
+  "diagnoses": [],
+  "summary_en": "This diagnostic report contains imaging findings from a Chest X-Ray (PA View). The report mentions mild cardiomegaly and recommends clinical correlation. No active consolidation or pleural effusion is noted. All findings are as reported — no additional interpretation has been added. Please discuss these findings with your doctor.",
+  "summary_ta": null,
+  "needs_review": [],
+  "disclaimer": "This is AI-generated information to help you understand your records. It is not a diagnosis or medical advice. Please consult your doctor.",
+  "error": null
+}

@@ -1,0 +1,170 @@
+{
+  "_comment": "Authoritative ICD-10-CM diagnostic classification subset for clinical condition mapping, ABDM/FHIR resource harmonization.",
+  "conditions": {
+    "type 2 diabetes": {
+      "icd10": "E11.9",
+      "display": "Type 2 diabetes mellitus without complications",
+      "category": "Endocrinology"
+    },
+    "diabetes mellitus": {
+      "icd10": "E11.9",
+      "display": "Type 2 diabetes mellitus without complications",
+      "category": "Endocrinology"
+    },
+    "t2dm": {
+      "icd10": "E11.9",
+      "display": "Type 2 diabetes mellitus",
+      "category": "Endocrinology"
+    },
+    "essential hypertension": {
+      "icd10": "I10",
+      "display": "Essential (primary) hypertension",
+      "category": "Cardiology"
+    },
+    "hypertension": {
+      "icd10": "I10",
+      "display": "Essential (primary) hypertension",
+      "category": "Cardiology"
+    },
+    "htn": {
+      "icd10": "I10",
+      "display": "Essential (primary) hypertension",
+      "category": "Cardiology"
+    },
+    "dyslipidemia": {
+      "icd10": "E78.5",
+      "display": "Hyperlipidemia, unspecified",
+      "category": "Cardiology"
+    },
+    "hypercholesterolemia": {
+      "icd10": "E78.0",
+      "display": "Pure hypercholesterolemia",
+      "category": "Cardiology"
+    },
+    "hypothyroidism": {
+      "icd10": "E03.9",
+      "display": "Hypothyroidism, unspecified",
+      "category": "Endocrinology"
+    },
+    "primary hypothyroidism": {
+      "icd10": "E03.9",
+      "display": "Hypothyroidism, unspecified",
+      "category": "Endocrinology"
+    },
+    "acute gastroenteritis": {
+      "icd10": "A09",
+      "display": "Infectious gastroenteritis and colitis, unspecified",
+      "category": "Gastroenterology"
+    },
+    "acute appendicitis": {
+      "icd10": "K35.80",
+      "display": "Unspecified acute appendicitis",
+      "category": "General Surgery"
+    },
+    "upper respiratory tract infection": {
+      "icd10": "J06.9",
+      "display": "Acute upper respiratory infection, unspecified",
+      "category": "General Medicine"
+    },
+    "urti": {
+      "icd10": "J06.9",
+      "display": "Acute upper respiratory infection, unspecified",
+      "category": "General Medicine"
+    },
+    "acute bronchitis": {
+      "icd10": "J20.9",
+      "display": "Acute bronchitis, unspecified",
+      "category": "Pulmonology"
+    },
+    "asthma": {
+      "icd10": "J45.909",
+      "display": "Unspecified asthma, uncomplicated",
+      "category": "Pulmonology"
+    },
+    "bronchial asthma": {
+      "icd10": "J45.909",
+      "display": "Unspecified asthma, uncomplicated",
+      "category": "Pulmonology"
+    },
+    "iron deficiency anemia": {
+      "icd10": "D50.9",
+      "display": "Iron deficiency anemia, unspecified",
+      "category": "Hematology"
+    },
+    "anemia": {
+      "icd10": "D64.9",
+      "display": "Anemia, unspecified",
+      "category": "Hematology"
+    },
+    "gerd": {
+      "icd10": "K21.9",
+      "display": "Gastro-esophageal reflux disease without esophagitis",
+      "category": "Gastroenterology"
+    },
+    "chronic kidney disease": {
+      "icd10": "N18.9",
+      "display": "Chronic kidney disease, unspecified",
+      "category": "Nephrology"
+    },
+    "ckd": {
+      "icd10": "N18.9",
+      "display": "Chronic kidney disease, unspecified",
+      "category": "Nephrology"
+    },
+    "coronary artery disease": {
+      "icd10": "I25.10",
+      "display": "Atherosclerotic heart disease of native coronary artery",
+      "category": "Cardiology"
+    },
+    "cad": {
+      "icd10": "I25.10",
+      "display": "Atherosclerotic heart disease of native coronary artery",
+      "category": "Cardiology"
+    },
+    "allergic rhinitis": {
+      "icd10": "J30.9",
+      "display": "Allergic rhinitis, unspecified",
+      "category": "ENT"
+    },
+    "fever": {
+      "icd10": "R50.9",
+      "display": "Fever, unspecified",
+      "category": "General Medicine"
+    },
+    "pneumonia": {
+      "icd10": "J18.9",
+      "display": "Pneumonia, unspecified organism",
+      "category": "Pulmonology"
+    },
+    "viral pyrexia": {
+      "icd10": "B34.9",
+      "display": "Viral infection, unspecified",
+      "category": "Infectious Diseases"
+    },
+    "febrile illness": {
+      "icd10": "R50.9",
+      "display": "Fever, unspecified (Febrile illness)",
+      "category": "General Medicine"
+    },
+    "pityriasis versicolor": {
+      "icd10": "B36.0",
+      "display": "Pityriasis versicolor (Tinea versicolor)",
+      "category": "Dermatology"
+    },
+    "p. versicolor": {
+      "icd10": "B36.0",
+      "display": "Pityriasis versicolor",
+      "category": "Dermatology"
+    },
+    "dehydration": {
+      "icd10": "E86.0",
+      "display": "Dehydration",
+      "category": "General Medicine"
+    },
+    "fatigue": {
+      "icd10": "R53.83",
+      "display": "Other fatigue",
+      "category": "General Medicine"
+    }
+  }
+}

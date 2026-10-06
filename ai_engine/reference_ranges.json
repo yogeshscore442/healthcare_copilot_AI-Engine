@@ -1,0 +1,616 @@
+{
+  "_comment": "Authoritative Reference Ranges based on LOINC and Standard Clinical Pathology Laboratory Guidelines (WHO, IFCC, NABL). LLM never sets clinical flags; flags are computed deterministically in code.",
+  "tests": {
+    "hba1c": {
+      "aliases": [
+        "hba1c",
+        "glycated haemoglobin",
+        "glycated hemoglobin",
+        "a1c",
+        "haemoglobin a1c",
+        "glycosylated hemoglobin"
+      ],
+      "loinc": "4548-4",
+      "unit": "%",
+      "unit_aliases": [
+        "%",
+        "percent"
+      ],
+      "ref_low": 4.0,
+      "ref_high": 5.6
+    },
+    "fasting_glucose": {
+      "aliases": [
+        "fasting blood glucose",
+        "fbs",
+        "fasting glucose",
+        "fasting blood sugar",
+        "fbg",
+        "glucose fasting",
+        "Glucose",
+        "Blood Glucose"
+      ],
+      "loinc": "1558-6",
+      "unit": "mg/dL",
+      "unit_aliases": [
+        "mg/dl",
+        "mg per dl"
+      ],
+      "ref_low": 70.0,
+      "ref_high": 100.0,
+      "mmol_factor": 18.0
+    },
+    "random_glucose": {
+      "aliases": [
+        "random blood glucose",
+        "rbs",
+        "random glucose",
+        "random blood sugar",
+        "ppbs",
+        "post prandial blood sugar",
+        "2h ppbs",
+        "post glucose",
+        "Glucose (Random)"
+      ],
+      "loinc": "2345-7",
+      "unit": "mg/dL",
+      "unit_aliases": [
+        "mg/dl",
+        "mg per dl"
+      ],
+      "ref_low": 70.0,
+      "ref_high": 140.0,
+      "mmol_factor": 18.0
+    },
+    "haemoglobin_male": {
+      "aliases": [
+        "haemoglobin",
+        "hemoglobin",
+        "hb",
+        "hgb",
+        "serum hemoglobin"
+      ],
+      "loinc": "718-7",
+      "unit": "g/dL",
+      "unit_aliases": [
+        "g/dl",
+        "gm/dl",
+        "gm%"
+      ],
+      "ref_low": 13.5,
+      "ref_high": 17.5,
+      "sex": "M"
+    },
+    "haemoglobin_female": {
+      "aliases": [
+        "haemoglobin",
+        "hemoglobin",
+        "hb",
+        "hgb",
+        "serum hemoglobin"
+      ],
+      "loinc": "718-7",
+      "unit": "g/dL",
+      "unit_aliases": [
+        "g/dl",
+        "gm/dl",
+        "gm%"
+      ],
+      "ref_low": 12.0,
+      "ref_high": 16.0,
+      "sex": "F"
+    },
+    "wbc": {
+      "aliases": [
+        "wbc",
+        "total wbc",
+        "total leukocyte count",
+        "tlc",
+        "white blood cells",
+        "white blood cell count",
+        "total leucocyte count"
+      ],
+      "loinc": "6690-2",
+      "unit": "10³/µL",
+      "unit_aliases": [
+        "10^3/ul",
+        "10³/ul",
+        "thou/ul",
+        "k/ul",
+        "cells/cumm",
+        "× 10³/µl",
+        "/cumm",
+        "cells/ul"
+      ],
+      "ref_low": 4.0,
+      "ref_high": 11.0
+    },
+    "platelets": {
+      "aliases": [
+        "platelets",
+        "platelet count",
+        "plt",
+        "thrombocytes",
+        "total platelets"
+      ],
+      "loinc": "777-3",
+      "unit": "10³/µL",
+      "unit_aliases": [
+        "10^3/ul",
+        "10³/ul",
+        "thou/ul",
+        "k/ul",
+        "lakhs/cumm",
+        "cells/cumm",
+        "10^5/cumm"
+      ],
+      "ref_low": 150.0,
+      "ref_high": 400.0
+    },
+    "rbc": {
+      "aliases": [
+        "rbc",
+        "red blood cells",
+        "total rbc",
+        "rbc count",
+        "erythrocyte count"
+      ],
+      "loinc": "789-8",
+      "unit": "10⁶/µL",
+      "unit_aliases": [
+        "10^6/ul",
+        "mil/ul",
+        "million/cumm",
+        "x 10^6/ul"
+      ],
+      "ref_low": 4.5,
+      "ref_high": 5.9
+    },
+    "hematocrit": {
+      "aliases": [
+        "hematocrit",
+        "haematocrit",
+        "hct",
+        "pcv",
+        "packed cell volume"
+      ],
+      "loinc": "4544-3",
+      "unit": "%",
+      "unit_aliases": [
+        "%",
+        "vol%"
+      ],
+      "ref_low": 38.0,
+      "ref_high": 50.0
+    },
+    "total_cholesterol": {
+      "aliases": [
+        "total cholesterol",
+        "cholesterol",
+        "chol",
+        "serum cholesterol"
+      ],
+      "loinc": "2093-3",
+      "unit": "mg/dL",
+      "unit_aliases": [
+        "mg/dl"
+      ],
+      "ref_low": null,
+      "ref_high": 200.0,
+      "mmol_factor": 38.67
+    },
+    "ldl": {
+      "aliases": [
+        "ldl",
+        "ldl cholesterol",
+        "ldl-c",
+        "low density lipoprotein",
+        "bad cholesterol"
+      ],
+      "loinc": "13457-7",
+      "unit": "mg/dL",
+      "unit_aliases": [
+        "mg/dl"
+      ],
+      "ref_low": null,
+      "ref_high": 100.0,
+      "mmol_factor": 38.67
+    },
+    "hdl_male": {
+      "aliases": [
+        "hdl",
+        "hdl cholesterol",
+        "hdl-c",
+        "high density lipoprotein",
+        "good cholesterol"
+      ],
+      "loinc": "2085-9",
+      "unit": "mg/dL",
+      "unit_aliases": [
+        "mg/dl"
+      ],
+      "ref_low": 40.0,
+      "ref_high": null,
+      "sex": "M",
+      "mmol_factor": 38.67
+    },
+    "hdl_female": {
+      "aliases": [
+        "hdl",
+        "hdl cholesterol",
+        "hdl-c",
+        "high density lipoprotein",
+        "good cholesterol"
+      ],
+      "loinc": "2085-9",
+      "unit": "mg/dL",
+      "unit_aliases": [
+        "mg/dl"
+      ],
+      "ref_low": 50.0,
+      "ref_high": null,
+      "sex": "F",
+      "mmol_factor": 38.67
+    },
+    "triglycerides": {
+      "aliases": [
+        "triglycerides",
+        "tg",
+        "trg",
+        "serum triglycerides"
+      ],
+      "loinc": "3043-7",
+      "unit": "mg/dL",
+      "unit_aliases": [
+        "mg/dl"
+      ],
+      "ref_low": null,
+      "ref_high": 150.0,
+      "mmol_factor": 88.57
+    },
+    "creatinine": {
+      "aliases": [
+        "creatinine",
+        "serum creatinine",
+        "s. creatinine",
+        "cr",
+        "sr. creatinine"
+      ],
+      "loinc": "2160-0",
+      "unit": "mg/dL",
+      "unit_aliases": [
+        "mg/dl"
+      ],
+      "ref_low": 0.6,
+      "ref_high": 1.2
+    },
+    "urea": {
+      "aliases": [
+        "urea",
+        "blood urea",
+        "serum urea",
+        "bun",
+        "blood urea nitrogen"
+      ],
+      "loinc": "3091-6",
+      "unit": "mg/dL",
+      "unit_aliases": [
+        "mg/dl"
+      ],
+      "ref_low": 7.0,
+      "ref_high": 20.0
+    },
+    "tsh": {
+      "aliases": [
+        "tsh",
+        "thyroid stimulating hormone",
+        "thyrotropin",
+        "serum tsh",
+        "s. tsh"
+      ],
+      "loinc": "3016-3",
+      "unit": "mIU/L",
+      "unit_aliases": [
+        "miu/l",
+        "uiu/ml",
+        "µiu/ml",
+        "mu/l"
+      ],
+      "ref_low": 0.4,
+      "ref_high": 4.0
+    },
+    "free_t3": {
+      "aliases": [
+        "free t3",
+        "ft3",
+        "free triiodothyronine"
+      ],
+      "loinc": "3051-0",
+      "unit": "pg/mL",
+      "unit_aliases": [
+        "pg/ml",
+        "pmol/l"
+      ],
+      "ref_low": 2.0,
+      "ref_high": 4.4
+    },
+    "free_t4": {
+      "aliases": [
+        "free t4",
+        "ft4",
+        "free thyroxine"
+      ],
+      "loinc": "2063-7",
+      "unit": "ng/dL",
+      "unit_aliases": [
+        "ng/dl",
+        "pmol/l"
+      ],
+      "ref_low": 0.8,
+      "ref_high": 1.8
+    },
+    "sodium": {
+      "aliases": [
+        "sodium",
+        "serum sodium",
+        "na",
+        "na+"
+      ],
+      "loinc": "2951-2",
+      "unit": "mEq/L",
+      "unit_aliases": [
+        "meq/l",
+        "mmol/l"
+      ],
+      "ref_low": 136.0,
+      "ref_high": 145.0
+    },
+    "potassium": {
+      "aliases": [
+        "potassium",
+        "serum potassium",
+        "k",
+        "k+"
+      ],
+      "loinc": "6298-4",
+      "unit": "mEq/L",
+      "unit_aliases": [
+        "meq/l",
+        "mmol/l"
+      ],
+      "ref_low": 3.5,
+      "ref_high": 5.1
+    },
+    "chloride": {
+      "aliases": [
+        "chloride",
+        "serum chloride",
+        "cl",
+        "cl-"
+      ],
+      "loinc": "2075-0",
+      "unit": "mEq/L",
+      "unit_aliases": [
+        "meq/l",
+        "mmol/l"
+      ],
+      "ref_low": 96.0,
+      "ref_high": 106.0
+    },
+    "calcium": {
+      "aliases": [
+        "calcium",
+        "serum calcium",
+        "total calcium",
+        "ca"
+      ],
+      "loinc": "17861-6",
+      "unit": "mg/dL",
+      "unit_aliases": [
+        "mg/dl"
+      ],
+      "ref_low": 8.5,
+      "ref_high": 10.5
+    },
+    "egfr": {
+      "aliases": [
+        "egfr",
+        "estimated gfr",
+        "estimated glomerular filtration rate"
+      ],
+      "loinc": "33914-3",
+      "unit": "mL/min",
+      "unit_aliases": [
+        "ml/min",
+        "ml/min/1.73m2"
+      ],
+      "ref_low": 60.0,
+      "ref_high": null
+    },
+    "uric_acid": {
+      "aliases": [
+        "uric acid",
+        "serum uric acid",
+        "sua"
+      ],
+      "loinc": "3084-1",
+      "unit": "mg/dL",
+      "unit_aliases": [
+        "mg/dl"
+      ],
+      "ref_low": 3.5,
+      "ref_high": 7.2
+    },
+    "total_bilirubin": {
+      "aliases": [
+        "total bilirubin",
+        "bilirubin total",
+        "s. bilirubin",
+        "serum bilirubin"
+      ],
+      "loinc": "1975-2",
+      "unit": "mg/dL",
+      "unit_aliases": [
+        "mg/dl"
+      ],
+      "ref_low": 0.2,
+      "ref_high": 1.2
+    },
+    "direct_bilirubin": {
+      "aliases": [
+        "direct bilirubin",
+        "conjugated bilirubin"
+      ],
+      "loinc": "1968-7",
+      "unit": "mg/dL",
+      "unit_aliases": [
+        "mg/dl"
+      ],
+      "ref_low": 0.0,
+      "ref_high": 0.3
+    },
+    "sgpt": {
+      "aliases": [
+        "sgpt",
+        "alt",
+        "alanine aminotransferase",
+        "alanine transaminase",
+        "serum glutamic pyruvic transaminase"
+      ],
+      "loinc": "1742-6",
+      "unit": "U/L",
+      "unit_aliases": [
+        "u/l",
+        "iu/l"
+      ],
+      "ref_low": 7.0,
+      "ref_high": 56.0
+    },
+    "sgot": {
+      "aliases": [
+        "sgot",
+        "ast",
+        "aspartate aminotransferase",
+        "aspartate transaminase",
+        "serum glutamic oxaloacetic transaminase"
+      ],
+      "loinc": "1920-8",
+      "unit": "U/L",
+      "unit_aliases": [
+        "u/l",
+        "iu/l"
+      ],
+      "ref_low": 10.0,
+      "ref_high": 40.0
+    },
+    "alp": {
+      "aliases": [
+        "alp",
+        "alkaline phosphatase",
+        "alk phos"
+      ],
+      "loinc": "6768-6",
+      "unit": "U/L",
+      "unit_aliases": [
+        "u/l",
+        "iu/l"
+      ],
+      "ref_low": 44.0,
+      "ref_high": 147.0
+    },
+    "total_protein": {
+      "aliases": [
+        "total protein",
+        "serum total protein",
+        "tp"
+      ],
+      "loinc": "2885-2",
+      "unit": "g/dL",
+      "unit_aliases": [
+        "g/dl",
+        "gm/dl"
+      ],
+      "ref_low": 6.0,
+      "ref_high": 8.3
+    },
+    "albumin": {
+      "aliases": [
+        "albumin",
+        "serum albumin",
+        "alb"
+      ],
+      "loinc": "1751-7",
+      "unit": "g/dL",
+      "unit_aliases": [
+        "g/dl",
+        "gm/dl"
+      ],
+      "ref_low": 3.4,
+      "ref_high": 5.4
+    },
+    "esr": {
+      "aliases": [
+        "esr",
+        "erythrocyte sedimentation rate",
+        "sed rate"
+      ],
+      "loinc": "4537-7",
+      "unit": "mm/hr",
+      "unit_aliases": [
+        "mm/hr",
+        "mm/1st hr",
+        "mm/h"
+      ],
+      "ref_low": 0.0,
+      "ref_high": 20.0
+    },
+    "crp": {
+      "aliases": [
+        "crp",
+        "c-reactive protein",
+        "c reactive protein"
+      ],
+      "loinc": "1988-5",
+      "unit": "mg/L",
+      "unit_aliases": [
+        "mg/l",
+        "mg/dl"
+      ],
+      "ref_low": 0.0,
+      "ref_high": 10.0
+    },
+    "vitamin_d": {
+      "aliases": [
+        "vitamin d",
+        "25-hydroxy vitamin d",
+        "25-oh vitamin d",
+        "vit d3",
+        "cholecalciferol"
+      ],
+      "loinc": "62292-8",
+      "unit": "ng/mL",
+      "unit_aliases": [
+        "ng/ml",
+        "nmol/l"
+      ],
+      "ref_low": 30.0,
+      "ref_high": 100.0
+    },
+    "vitamin_b12": {
+      "aliases": [
+        "vitamin b12",
+        "b12",
+        "cyanocobalamin",
+        "serum b12"
+      ],
+      "loinc": "2132-9",
+      "unit": "pg/mL",
+      "unit_aliases": [
+        "pg/ml",
+        "pmol/l"
+      ],
+      "ref_low": 200.0,
+      "ref_high": 900.0
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "doc_type": "prescription",
+  "doc_date": "2026-03-20",
+  "collection_date": null,
+  "follow_up_date": "2026-03-24",
+  "language": "en",
+  "patient_name_present": true,
+  "allergies": [],
+  "medicines": [
+    {
+      "name_raw": "Calpol 120",
+      "generic": "Paracetamol",
+      "strength": "120 mg/5ml",
+      "schedule_raw": "5ml TDS SOS",
+      "schedule_parsed": [
+        "morning",
+        "afternoon",
+        "night"
+      ],
+      "food_instruction": "after_food",
+      "duration_days": 3,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name_raw": "Meftal-P",
+      "generic": "Mefenamic Acid",
+      "strength": "100 mg/5ml",
+      "schedule_raw": "4ml BD after food",
+      "schedule_parsed": [
+        "morning",
+        "night"
+      ],
+      "food_instruction": "after_food",
+      "duration_days": 3,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name_raw": "Vizylac",
+      "generic": "Lactic Acid Bacillus + B Complex",
+      "strength": null,
+      "schedule_raw": "1 sachet OD in water",
+      "schedule_parsed": [
+        "morning"
+      ],
+      "food_instruction": null,
+      "duration_days": 5,
+      "confidence": 1.0,
+      "bbox": null
+    }
+  ],
+  "tests": [],
+  "diagnoses": [
+    {
+      "text": "Viral Pyrexia with Mild Dehydration",
+      "confidence": 1.0,
+      "icd10": null
+    }
+  ],
+  "needs_review": [],
+  "disclaimer": "This is AI-generated information to help you understand your records. It is not a diagnosis or medical advice. Please consult your doctor.",
+  "error": null
+}

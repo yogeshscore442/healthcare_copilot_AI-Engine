@@ -1,0 +1,179 @@
+brand_name,generic_name,strength
+Dolo 650,Paracetamol,650 mg
+Dolo 500,Paracetamol,500 mg
+Crocin 650,Paracetamol,650 mg
+Crocin 500,Paracetamol,500 mg
+Crocin Advance,Paracetamol,500 mg
+Calpol 500,Paracetamol,500 mg
+Calpol 250,Paracetamol,250 mg
+Calpol 120,Paracetamol,120 mg/5ml
+Combiflam,Ibuprofen + Paracetamol,400 mg + 325 mg
+Brufen 400,Ibuprofen,400 mg
+Brufen 600,Ibuprofen,600 mg
+Ibugesic Plus,Ibuprofen + Paracetamol,400 mg + 325 mg
+Meftal-P,Mefenamic Acid,100 mg/5ml
+Meftal Spas,Mefenamic Acid + Dicyclomine,250 mg + 10 mg
+Meftal 500,Mefenamic Acid,500 mg
+Ultracet,Tramadol + Paracetamol,37.5 mg + 325 mg
+Pan-D,Pantoprazole + Domperidone,40 mg + 10 mg
+Pantop 40,Pantoprazole,40 mg
+Pantop-D,Pantoprazole + Domperidone,40 mg + 10 mg
+Pantocid,Pantoprazole,40 mg
+Pantocid-D,Pantoprazole + Domperidone,40 mg + 10 mg
+Omez 20,Omeprazole,20 mg
+Omez-D,Omeprazole + Domperidone,20 mg + 10 mg
+Rablet 20,Rabeprazole,20 mg
+Rablet-D,Rabeprazole + Domperidone,20 mg + 30 mg
+Cyra 20,Rabeprazole,20 mg
+Cyra-D,Rabeprazole + Domperidone,20 mg + 30 mg
+Nexpro 20,Esomeprazole,20 mg
+Nexpro 40,Esomeprazole,40 mg
+Rantac 150,Ranitidine,150 mg
+Zinetac 150,Ranitidine,150 mg
+Perinorm,Metoclopramide,10 mg
+Emeset 4,Ondansetron,4 mg
+Emeset 8,Ondansetron,8 mg
+Ondem 4,Ondansetron,4 mg
+Ondem MD 4,Ondansetron,4 mg
+Vomistop 10,Domperidone,10 mg
+Motilium 10,Domperidone,10 mg
+Glycomet 500,Metformin,500 mg
+Glycomet 850,Metformin,850 mg
+Glycomet 1000,Metformin,1000 mg
+Glycomet SR 500,Metformin (SR),500 mg
+Glycomet GP 1,Glimepiride + Metformin,1 mg + 500 mg
+Glycomet GP 2,Glimepiride + Metformin,2 mg + 500 mg
+Gluconorm G1,Glimepiride + Metformin,1 mg + 500 mg
+Gluconorm G2,Glimepiride + Metformin,2 mg + 500 mg
+Jalra 50,Vildagliptin,50 mg
+Jalra M 50/500,Vildagliptin + Metformin,50 mg + 500 mg
+Januvia 50,Sitagliptin,50 mg
+Januvia 100,Sitagliptin,100 mg
+Janumet 50/500,Sitagliptin + Metformin,50 mg + 500 mg
+Trajenta 5,Linagliptin,5 mg
+Glynase MF 1,Glipizide + Metformin,1 mg + 500 mg
+Jardiance 10,Empagliflozin,10 mg
+Jardiance 25,Empagliflozin,25 mg
+Forxiga 10,Dapagliflozin,10 mg
+Forxiga 5,Dapagliflozin,5 mg
+Rybelsus 3,Semaglutide,3 mg
+Rybelsus 7,Semaglutide,7 mg
+Rybelsus 14,Semaglutide,14 mg
+Thyronorm 25,Levothyroxine,25 mcg
+Thyronorm 50,Levothyroxine,50 mcg
+Thyronorm 75,Levothyroxine,75 mcg
+Thyronorm 100,Levothyroxine,100 mcg
+Thyronorm 125,Levothyroxine,125 mcg
+Eltroxin 50,Levothyroxine,50 mcg
+Eltroxin 100,Levothyroxine,100 mcg
+Telma 20,Telmisartan,20 mg
+Telma 40,Telmisartan,40 mg
+Telma 80,Telmisartan,80 mg
+Telma H,Telmisartan + Hydrochlorothiazide,40 mg + 12.5 mg
+Telmikind 40,Telmisartan,40 mg
+Telmikind H,Telmisartan + Hydrochlorothiazide,40 mg + 12.5 mg
+Cilacar 10,Cilnidipine,10 mg
+Cilacar 20,Cilnidipine,20 mg
+Cardace 2.5,Ramipril,2.5 mg
+Cardace 5,Ramipril,5 mg
+Envas 5,Enalapril,5 mg
+Losar 50,Losartan,50 mg
+Losar H,Losartan + Hydrochlorothiazide,50 mg + 12.5 mg
+Stamlo 5,Amlodipine,5 mg
+Stamlo 10,Amlodipine,10 mg
+Amlodac 5,Amlodipine,5 mg
+Amlodac 10,Amlodipine,10 mg
+Norvasc 5,Amlodipine,5 mg
+Atenolol 25,Atenolol,25 mg
+Atenolol 50,Atenolol,50 mg
+Metolar 25,Metoprolol Succinate,25 mg
+Metolar 50,Metoprolol Succinate,50 mg
+Metolar XR 25,Metoprolol Succinate (XR),25 mg
+Starpress XL 25,Metoprolol Succinate,25 mg
+Cardivas 3.125,Carvedilol,3.125 mg
+Cardivas 6.25,Carvedilol,6.25 mg
+Atorlip 10,Atorvastatin,10 mg
+Atorlip 20,Atorvastatin,20 mg
+Atorlip 40,Atorvastatin,40 mg
+Atorva 10,Atorvastatin,10 mg
+Atorva 20,Atorvastatin,20 mg
+Atorva 40,Atorvastatin,40 mg
+Lipitor 20,Atorvastatin,20 mg
+Rozucor 10,Rosuvastatin,10 mg
+Rozucor 20,Rosuvastatin,20 mg
+Rosulip 10,Rosuvastatin,10 mg
+Rosulip 20,Rosuvastatin,20 mg
+Crestor 10,Rosuvastatin,10 mg
+Ecosprin 75,Aspirin,75 mg
+Ecosprin 150,Aspirin,150 mg
+Disprin,Aspirin,350 mg
+Clopivas 75,Clopidogrel,75 mg
+Deplatt 75,Clopidogrel,75 mg
+Plavix 75,Clopidogrel,75 mg
+Sorbitrate 5,Isosorbide Dinitrate,5 mg
+Monotrate 20,Isosorbide Mononitrate,20 mg
+Shelcal 500,Calcium Carbonate + Vitamin D3,500 mg + 250 IU
+Shelcal HD,Calcium Carbonate + Vitamin D3,500 mg + 500 IU
+Caldikind Plus,Calcium Carbonate + Vitamin D3,500 mg + 250 IU
+Calcirol,Cholecalciferol (Vitamin D3),60000 IU
+D-Rise 60k,Cholecalciferol (Vitamin D3),60000 IU
+Revital H,Multivitamins + Minerals,
+Limcee 500,Vitamin C,500 mg
+Becosules,Vitamin B Complex,
+Neurobion Forte,Vitamin B1 + B6 + B12,
+Supradyn,Multivitamin + Minerals,
+Methycobal 500,Methylcobalamin,500 mcg
+Stugeron 25,Cinnarizine,25 mg
+Vertin 8,Betahistine,8 mg
+Vertin 16,Betahistine,16 mg
+Allegra 120,Fexofenadine,120 mg
+Allegra 180,Fexofenadine,180 mg
+Cetirizine 10,Cetirizine,10 mg
+Cetzine 10,Cetirizine,10 mg
+Levocet 5,Levocetirizine,5 mg
+Montair LC,Montelukast + Levocetirizine,10 mg + 5 mg
+Monticope,Montelukast + Levocetirizine,10 mg + 5 mg
+Asthalin 2.5mg,Salbutamol,2.5 mg
+Asthalin Inhaler,Salbutamol,100 mcg
+Deriphyllin,Etofylline + Theophylline,77 mg + 23 mg
+Foracort 200,Formoterol + Budesonide,6 mcg + 200 mcg
+Budecort 200,Budesonide,200 mcg
+Azithral 250,Azithromycin,250 mg
+Azithral 500,Azithromycin,500 mg
+Azee 500,Azithromycin,500 mg
+Mox 250,Amoxicillin,250 mg
+Mox 500,Amoxicillin,500 mg
+Augmentin 625,Amoxicillin + Clavulanate,500 mg + 125 mg
+Clavam 625,Amoxicillin + Clavulanate,500 mg + 125 mg
+Cifran 500,Ciprofloxacin,500 mg
+Ciplox 500,Ciprofloxacin,500 mg
+Zifi 200,Cefixime,200 mg
+Zifi 100,Cefixime,100 mg
+Taxim-O 200,Cefixime,200 mg
+Mahacef 200,Cefixime,200 mg
+Monocef 1g,Ceftriaxone,1000 mg
+Norflox-TZ,Norfloxacin + Tinidazole,400 mg + 600 mg
+Oframax,Ceftriaxone,1000 mg
+Oflox 200,Ofloxacin,200 mg
+Sporlac,Lactobacillus Sporogenes,
+Vizylac,Lactic Acid Bacillus + B Complex,
+Pregabalin 75,Pregabalin,75 mg
+Lyrica 75,Pregabalin,75 mg
+Nexito 10,Escitalopram,10 mg
+Clonil 25,Clomipramine,25 mg
+Dulane 20,Duloxetine,20 mg
+Itaspor,Itraconazole,
+Itaspor 200,Itraconazole,200 mg
+Itaspor 100,Itraconazole,100 mg
+Lamifin Cream,Terbinafine,1%
+Lamifin,Terbinafine,1%
+Nizoclin Soap,Ketoconazole,2%
+Nizoclin,Ketoconazole,2%
+Lejet 5,Levocetirizine,5 mg
+Safecet 5,Levocetirizine,5 mg
+Lejet,Levocetirizine,5 mg
+Safecet,Levocetirizine,5 mg
+Episcent Cream,Ketoconazole + Zinc Pyrithione,15 g
+ORS,Oral Rehydration Salts,21.8 g
+Electral,Oral Rehydration Salts,21.8 g
+Vitamin C,Ascorbic Acid,500 mg

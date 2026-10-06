@@ -1,0 +1,67 @@
+{
+  "doc_type": "prescription",
+  "doc_date": "2026-03-15",
+  "collection_date": null,
+  "follow_up_date": "2026-04-15",
+  "language": "en",
+  "patient_name_present": true,
+  "allergies": [],
+  "medicines": [
+    {
+      "name_raw": "Telma 40",
+      "generic": "Telmisartan",
+      "strength": "40 mg",
+      "schedule_raw": "1-0-0 before food",
+      "schedule_parsed": [
+        "morning"
+      ],
+      "food_instruction": "before_food",
+      "duration_days": 30,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name_raw": "Glycomet 500",
+      "generic": "Metformin",
+      "strength": "500 mg",
+      "schedule_raw": "1-0-1 after food",
+      "schedule_parsed": [
+        "morning",
+        "night"
+      ],
+      "food_instruction": "after_food",
+      "duration_days": 30,
+      "confidence": 1.0,
+      "bbox": null
+    },
+    {
+      "name_raw": "Atorlip 10",
+      "generic": "Atorvastatin",
+      "strength": "10 mg",
+      "schedule_raw": "0-0-1 HS",
+      "schedule_parsed": [
+        "night"
+      ],
+      "food_instruction": "after_food",
+      "duration_days": 30,
+      "confidence": 1.0,
+      "bbox": null
+    }
+  ],
+  "tests": [],
+  "diagnoses": [
+    {
+      "text": "Essential Hypertension",
+      "confidence": 1.0,
+      "icd10": "I10"
+    },
+    {
+      "text": "Type 2 Diabetes",
+      "confidence": 1.0,
+      "icd10": "E11.9"
+    }
+  ],
+  "needs_review": [],
+  "disclaimer": "This is AI-generated information to help you understand your records. It is not a diagnosis or medical advice. Please consult your doctor.",
+  "error": null
+}
