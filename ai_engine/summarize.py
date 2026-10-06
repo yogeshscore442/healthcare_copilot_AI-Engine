@@ -138,6 +138,17 @@ _TA_SYSTEM = """நீங்கள் ஒரு மருத்துவ ஆவ�
 5. கடைசியாக சரியாக இந்த வாக்கியத்தை சேர்க்கவும்: "இது AI-உருவாக்கிய தகவல். இது நோய் கண்டறிதலோ மருத்துவ ஆலோசனையோ அல்ல. உங்கள் மருத்துவரை அணுகவும்."
 6. சுருக்க உரையை மட்டும் திரும்பவும்."""
 
+_HI_SYSTEM = """आप एक मेडिकल दस्तावेज़ सारांश सहायक हैं।
+दिए गए मेडिकल रिकॉर्ड डेटा के आधार पर, हिंदी में एक संक्षिप्त और सरल सारांश लिखें।
+
+अनिवार्य नियम:
+1. दिए गए डेटा में जो है केवल वही बताएं।
+2. "आपको [बीमारी] है" जैसा कोई निदान न कहें।
+3. कोई भी दवा लेने या खुराक बदलने की सलाह न दें।
+4. असामान्य मानों के लिए: "[परीक्षण नाम] का मान ([मान] [इकाई]) सामान्य सीमा से अधिक/कम है। कृपया अपने डॉक्टर से चर्चा करें।"
+5. अंत में बिल्कुल यह वाक्य जोड़ें: "यह AI-जनरेटेड जानकारी है। यह कोई निदान या चिकित्सीय सलाह नहीं है। कृपया अपने डॉक्टर से परामर्श लें।"
+6. केवल सारांश पाठ लौटाएं।"""
+
 
 def _call_summarize_llm(prompt: str, system: str) -> str:
     """Call LLM for summarization with automatic fallback. Returns empty string on failure."""
@@ -170,7 +181,11 @@ def _call_summarize_llm(prompt: str, system: str) -> str:
                     if resp and resp.text:
                         return resp.text
                 except Exception as ex:
-                    logger.warning("Summarize model %s failed: %s; trying fallback", m, ex)
+                    logger.warning("Summarize model %s failed: %s", m, ex)
+                    err_msg = str(ex).lower()
+                    if "429" in err_msg or "quota" in err_msg or "resourceexhausted" in err_msg:
+                        logger.info("Project quota exceeded — transitioning immediately to deterministic fallback")
+                        break
                     continue
 
         elif provider == "openai":
@@ -286,6 +301,31 @@ def _deterministic_summary_ta(record: dict) -> str:
     return " ".join(parts) + " இது AI-உருவாக்கிய தகவல். இது நோய் கண்டறிதலோ மருத்துவ ஆலோசனையோ அல்ல. உங்கள் மருத்துவரை அணுகவும்."
 
 
+def _deterministic_summary_hi(record: dict) -> str:
+    """Safe Hindi deterministic fallback."""
+    tests = record.get("tests", [])
+    meds = record.get("medicines", [])
+    parts = []
+
+    if tests:
+        highs = [t["name"] for t in tests if t.get("flag") == "HIGH"]
+        lows = [t["name"] for t in tests if t.get("flag") == "LOW"]
+        if highs:
+            parts.append(f"{', '.join(highs)} का मान सामान्य सीमा से अधिक है। कृपया अपने डॉक्टर से चर्चा करें।")
+        if lows:
+            parts.append(f"{', '.join(lows)} का मान सामान्य सीमा से कम है। कृपया अपने डॉक्टर से चर्चा करें।")
+        if not highs and not lows:
+            parts.append("सभी परीक्षण परिणाम सामान्य सीमा के भीतर हैं।")
+
+    if meds:
+        parts.append(f"इस रिकॉर्ड में {len(meds)} दवा(एं) सूचीबद्ध हैं। कृपया अपने डॉक्टर या फार्मासिस्ट से पुष्टि करें।")
+
+    if not parts:
+        parts.append("कृपया अपने डॉक्टर से इस मेडिकल रिकॉर्ड की समीक्षा करें।")
+
+    return " ".join(parts) + " यह AI-जनरेटेड जानकारी है। यह कोई निदान या चिकित्सीय सलाह नहीं है। कृपया अपने डॉक्टर से परामर्श लें।"
+
+
 def _build_prompt(record: dict) -> str:
     """Build a concise text representation of the record for the summarization LLM."""
     masked = mask_record_for_llm(record)
@@ -363,19 +403,64 @@ def build_explanation_en(test: dict) -> Optional[str]:
     return None
 
 
+def build_explanation_ta(test: dict) -> Optional[str]:
+    """Plain-language Tamil explanation for a single test result."""
+    name = test.get("name", "")
+    val = test.get("value")
+    unit = test.get("unit", "")
+    flag = test.get("flag", "UNKNOWN")
+    vt = test.get("value_text")
+    if vt:
+        return f"{name} பரிசோதனை முடிவுகள் உள்ளன — மருத்துவரிடம் ஆலோசிக்கவும்."
+    if val is None:
+        return None
+    val_str = f"{val} {unit}".strip()
+    if flag == "HIGH":
+        return f"{name} ({val_str}) வழக்கமான அளவை விட அதிகமாக உள்ளது. மருத்துவரிடம் பேசுங்கள்."
+    if flag == "LOW":
+        return f"{name} ({val_str}) வழக்கமான அளவை விட குறைவாக உள்ளது. மருத்துவரிடம் பேசுங்கள்."
+    if flag == "NORMAL":
+        return f"{name} ({val_str}) இயல்பான அளவில் உள்ளது."
+    return None
+
+
+def build_explanation_hi(test: dict) -> Optional[str]:
+    """Plain-language Hindi explanation for a single test result."""
+    name = test.get("name", "")
+    val = test.get("value")
+    unit = test.get("unit", "")
+    flag = test.get("flag", "UNKNOWN")
+    vt = test.get("value_text")
+    if vt:
+        return f"{name} रिपोर्ट में निष्कर्ष शामिल हैं — कृपया डॉक्टर से चर्चा करें।"
+    if val is None:
+        return None
+    val_str = f"{val} {unit}".strip()
+    if flag == "HIGH":
+        return f"आपका {name} ({val_str}) सामान्य सीमा से अधिक है। कृपया डॉक्टर से चर्चा करें।"
+    if flag == "LOW":
+        return f"आपका {name} ({val_str}) सामान्य सीमा से कम है। कृपया डॉक्टर से चर्चा करें।"
+    if flag == "NORMAL":
+        return f"आपका {name} ({val_str}) सामान्य सीमा के भीतर है।"
+    return None
+
+
 # ── Public API ────────────────────────────────────────────────────────────────
 
 def build_summaries(record: dict) -> dict:
     """
-    Add summary_en, summary_ta, and per-test explanation_en / explanation_ta
+    Add summary_en, summary_ta, summary_hi, and per-test explanations
     to *record* (modifies in place). Returns the record.
     Always falls back to deterministic templates if LLM fails or output is unsafe.
-    PHASE 3: Also falls back if summary contains numbers not grounded in the record.
     """
     # Per-test explanations (deterministic — no LLM)
     for test in record.get("tests", []):
         if not test.get("explanation_en"):
             test["explanation_en"] = build_explanation_en(test)
+        if not test.get("explanation_ta"):
+            test["explanation_ta"] = build_explanation_ta(test)
+        if not test.get("explanation_hi"):
+            test["explanation_hi"] = build_explanation_hi(test)
 
     # English summary
     if not record.get("summary_en"):
@@ -392,7 +477,7 @@ def build_summaries(record: dict) -> dict:
     if record["summary_en"] and DISCLAIMER not in record["summary_en"]:
         record["summary_en"] = record["summary_en"].rstrip() + " " + DISCLAIMER
 
-    # Tamil summary (stretch)
+    # Tamil summary
     if not record.get("summary_ta"):
         prompt = _build_prompt(record)
         ta_text = _call_summarize_llm(prompt, _TA_SYSTEM)
@@ -400,5 +485,14 @@ def build_summaries(record: dict) -> dict:
             record["summary_ta"] = ta_text.strip()
         else:
             record["summary_ta"] = _deterministic_summary_ta(record)
+
+    # Hindi summary
+    if not record.get("summary_hi"):
+        prompt = _build_prompt(record)
+        hi_text = _call_summarize_llm(prompt, _HI_SYSTEM)
+        if hi_text:
+            record["summary_hi"] = hi_text.strip()
+        else:
+            record["summary_hi"] = _deterministic_summary_hi(record)
 
     return record

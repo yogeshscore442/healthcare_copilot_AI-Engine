@@ -20,18 +20,18 @@
 
 | Document | Expected Type | Extracted Type | Tests (Ext/Exp) | Meds (Ext/Exp) | Latency | Status |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
-| `lab1.jpg` | lab_report | lab_report | 5/5 | 0/0 | 0.0s | PASS |
-| `lab2.jpg` | lab_report | lab_report | 4/4 | 0/0 | 0.0s | PASS |
-| `lab3.jpg` | lab_report | lab_report | 3/3 | 0/0 | 0.0s | PASS |
-| `lab4.jpg` | lab_report | lab_report | 5/5 | 0/0 | 0.0s | PASS |
-| `prescription1.jpg` | prescription | prescription | 0/0 | 3/3 | 0.0s | PASS |
-| `prescription2.jpg` | prescription | prescription | 0/0 | 4/4 | 0.0s | PASS |
-| `prescription3.jpg` | prescription | prescription | 0/0 | 3/3 | 0.0s | PASS |
-| `discharge1.pdf` | discharge_summary | discharge_summary | 0/0 | 3/3 | 0.0s | PASS |
-| `discharge2.pdf` | discharge_summary | discharge_summary | 0/0 | 3/3 | 0.0s | PASS |
-| `tamil_mixed1.jpg` | prescription | prescription | 0/0 | 3/3 | 0.0s | PASS |
-| `handwritten1.jpg` | prescription | prescription | 0/0 | 4/4 | 0.0s | PASS |
-| `diagnostic1.jpg` | diagnostic_report | diagnostic_report | 1/1 | 0/0 | 0.0s | PASS |
+| `lab1.jpg` | lab_report | lab_report | 5/5 | 0/0 | 3.51s | PASS |
+| `lab2.jpg` | lab_report | lab_report | 4/4 | 0/0 | 0.41s | PASS |
+| `lab3.jpg` | lab_report | lab_report | 3/3 | 0/0 | 0.45s | PASS |
+| `lab4.jpg` | lab_report | lab_report | 5/5 | 0/0 | 0.55s | PASS |
+| `prescription1.jpg` | prescription | prescription | 0/0 | 3/3 | 0.44s | PASS |
+| `prescription2.jpg` | prescription | prescription | 0/0 | 4/4 | 0.6s | PASS |
+| `prescription3.jpg` | prescription | prescription | 0/0 | 3/3 | 0.63s | PASS |
+| `discharge1.pdf` | discharge_summary | discharge_summary | 0/0 | 3/3 | 0.59s | PASS |
+| `discharge2.pdf` | discharge_summary | discharge_summary | 0/0 | 3/3 | 0.48s | PASS |
+| `tamil_mixed1.jpg` | prescription | prescription | 0/0 | 3/3 | 0.78s | PASS |
+| `handwritten1.jpg` | prescription | prescription | 0/0 | 4/4 | 0.6s | PASS |
+| `diagnostic1.jpg` | diagnostic_report | diagnostic_report | 1/1 | 0/0 | 0.57s | PASS |
 
 ## 3. Error Analysis
 

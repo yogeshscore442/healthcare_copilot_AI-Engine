@@ -31,8 +31,14 @@ def generate_audio(text: str, lang: str = "en", output_path: Optional[str] = Non
         return None
 
     clean_text = text.strip()
-    # Normalize language code
-    tts_lang = "ta" if lang in ("ta", "tamil") else "en"
+    # Normalize language code (en, ta, hi)
+    lang_lower = (lang or "en").lower().strip()
+    if lang_lower in ("ta", "tamil"):
+        tts_lang = "ta"
+    elif lang_lower in ("hi", "hindi"):
+        tts_lang = "hi"
+    else:
+        tts_lang = "en"
 
     try:
         from gtts import gTTS
@@ -53,24 +59,28 @@ def generate_audio(text: str, lang: str = "en", output_path: Optional[str] = Non
         return None
 
 
-def get_browser_speech_html(text_en: str, text_ta: str) -> str:
+def get_browser_speech_html(text_en: str, text_ta: str, text_hi: str = "") -> str:
     """
     Generate interactive HTML with Web Speech API audio buttons
-    for zero-latency browser-native text-to-speech.
+    for zero-latency browser-native text-to-speech in English, Tamil, and Hindi.
     """
     safe_en = (text_en or "").replace("'", "\\'").replace("\n", " ")
     safe_ta = (text_ta or "").replace("'", "\\'").replace("\n", " ")
+    safe_hi = (text_hi or "").replace("'", "\\'").replace("\n", " ")
     return f"""
     <div style="background: linear-gradient(135deg, #1e293b, #0f172a); padding: 16px; border-radius: 12px; border: 1px solid #334155; margin-top: 12px;">
       <h4 style="color: #38bdf8; margin: 0 0 10px 0; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em;">
-        🎙️ Voice Copilot — Audio Explanation (குரல் விளக்கம்)
+        🎙️ Multilingual Voice Copilot — Audio Explanation (குரல் / आवाज़)
       </h4>
       <div style="display: flex; gap: 12px; flex-wrap: wrap;">
         <button onclick="speakText('{safe_en}', 'en-US')" style="background: #2563eb; color: white; border: none; padding: 10px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;">
           🔊 Listen in English
         </button>
         <button onclick="speakText('{safe_ta}', 'ta-IN')" style="background: #059669; color: white; border: none; padding: 10px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;">
-          🗣️ தமிழில் கேட்க (Listen in Tamil)
+          🗣️ தமிழில் கேட்க (Tamil)
+        </button>
+        <button onclick="speakText('{safe_hi}', 'hi-IN')" style="background: #ea580c; color: white; border: none; padding: 10px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+          🎙️ हिंदी में सुनें (Hindi)
         </button>
         <button onclick="window.speechSynthesis.cancel()" style="background: #dc2626; color: white; border: none; padding: 10px 14px; border-radius: 8px; font-weight: 600; cursor: pointer;">
           ⏹️ Stop

@@ -181,8 +181,8 @@ with st.sidebar:
     
     lang_hint = st.selectbox(
         "Language Priority:",
-        options=["auto", "en", "ta"],
-        format_func=lambda x: {"auto": "Auto-Detect", "en": "English", "ta": "Tamil (தமிழ்)"}[x],
+        options=["auto", "en", "ta", "hi"],
+        format_func=lambda x: {"auto": "Auto-Detect", "en": "English", "ta": "Tamil (தமிழ்)", "hi": "Hindi (हिंदी)"}[x],
     )
     
     uploaded_file = None
@@ -502,36 +502,49 @@ else:
             st.markdown("#### 🇮🇳 தமிழ் நோயாளி சுருக்கம் (Tamil Summary)")
             st.write(record.get("summary_ta") or "தமிழ் சுருக்கம் கிடைக்கவில்லை.")
 
+            st.markdown("#### 🇮🇳 हिंदी रोगी सारांश (Hindi Summary)")
+            st.write(record.get("summary_hi") or "हिंदी सारांश उपलब्ध नहीं है।")
+
         # ── TAB 5: Voice Copilot (Spoken Patient Audio) ──
         with tab_voice:
-            st.markdown("### 🎙️ Voice Copilot (குரல் விளக்கம்)")
-            st.caption("Empowering patients who cannot read clinical terms through instant speech synthesis.")
+            st.markdown("### 🎙️ Multilingual Voice Copilot (குரல் / आवाज़)")
+            st.caption("Empowering patients who cannot read clinical terms through instant speech synthesis in 3 languages.")
 
             sum_en = record.get("summary_en", "")
             sum_ta = record.get("summary_ta", "")
+            sum_hi = record.get("summary_hi", "")
 
             # Native Web Speech HTML Button (Zero latency, runs right in the browser)
-            st.components.v1.html(get_browser_speech_html(sum_en, sum_ta), height=140)
+            st.components.v1.html(get_browser_speech_html(sum_en, sum_ta, sum_hi), height=140)
 
-            # Optional Server-side Audio Generation
-            col_v1, col_v2 = st.columns(2)
+            # Server-side Audio Generation for 3 languages
+            col_v1, col_v2, col_v3 = st.columns(3)
             with col_v1:
-                if st.button("🎧 Generate High-Quality English Audio", key="tts_en_btn"):
+                if st.button("🎧 English Audio", key="tts_en_btn"):
                     with st.spinner("Generating English Voice..."):
                         audio_en = generate_audio(sum_en, lang="en")
                         if audio_en:
                             st.audio(audio_en, format="audio/mp3")
                         else:
-                            st.warning("Audio synthesis offline. Please use the browser voice buttons above.")
+                            st.warning("Please use the browser voice buttons above.")
 
             with col_v2:
-                if st.button("🎧 தமிழ் குரல் உருவாக்க (Generate Tamil Audio)", key="tts_ta_btn"):
+                if st.button("🎧 தமிழ் குரல் (Tamil)", key="tts_ta_btn"):
                     with st.spinner("Generating Tamil Voice..."):
                         audio_ta = generate_audio(sum_ta, lang="ta")
                         if audio_ta:
                             st.audio(audio_ta, format="audio/mp3")
                         else:
-                            st.warning("Audio synthesis offline. Please use the browser voice buttons above.")
+                            st.warning("Please use the browser voice buttons above.")
+
+            with col_v3:
+                if st.button("🎧 हिंदी आवाज़ (Hindi)", key="tts_hi_btn"):
+                    with st.spinner("Generating Hindi Voice..."):
+                        audio_hi = generate_audio(sum_hi, lang="hi")
+                        if audio_hi:
+                            st.audio(audio_hi, format="audio/mp3")
+                        else:
+                            st.warning("Please use the browser voice buttons above.")
 
         # ── TAB 6: ABDM FHIR R4 Bundle Export ──
         with tab_fhir:

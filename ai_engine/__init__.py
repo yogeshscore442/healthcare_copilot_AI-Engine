@@ -78,6 +78,20 @@ def extract_record(
         # ── Cache check ──────────────────────────────────────────────────────
         cached = get_cached(file_path)
         if cached is not None:
+            # Ensure additive fields (summary_hi, safety_alerts, cost_savings) are populated
+            if not cached.get("summary_hi"):
+                cached = build_summaries(cached)
+            if "safety_alerts" not in cached and cached.get("medicines"):
+                try:
+                    cached["safety_alerts"] = check_drug_interactions(cached["medicines"])
+                    cached["drug_advisories"] = get_drug_advisories(cached["medicines"])
+                except Exception:
+                    pass
+            if "cost_savings" not in cached and cached.get("medicines"):
+                try:
+                    cached["cost_savings"] = calculate_prescription_savings(cached["medicines"])
+                except Exception:
+                    pass
             return cached
 
         # ── Extract ──────────────────────────────────────────────────────────

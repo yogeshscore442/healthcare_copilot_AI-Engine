@@ -19,7 +19,7 @@ DISCLAIMER = (
 # ── Type aliases ───────────────────────────────────────────────────────────────
 FlagValue = Literal["LOW", "NORMAL", "HIGH", "UNKNOWN"]
 DocType = Literal["prescription", "lab_report", "discharge_summary", "diagnostic_report"]
-Language = Literal["en", "ta", "mixed"]
+Language = Literal["en", "ta", "hi", "mixed"]
 FoodInstruction = Literal["before_food", "after_food"]
 ScheduleSlot = Literal["morning", "afternoon", "night"]
 
@@ -79,6 +79,7 @@ class TestRecord(BaseModel):
     flag: FlagValue = "UNKNOWN"
     explanation_en: Optional[str] = None
     explanation_ta: Optional[str] = None
+    explanation_hi: Optional[str] = None  # additive extension
     confidence: float = Field(ge=0.0, le=1.0)
     bbox: Optional[List[float]] = None
 
@@ -118,6 +119,7 @@ class HealthRecord(BaseModel):
     diagnoses: List[DiagnosisRecord] = Field(default_factory=list)
     summary_en: Optional[str] = None
     summary_ta: Optional[str] = None
+    summary_hi: Optional[str] = None  # additive extension
     safety_alerts: List[Dict[str, Any]] = Field(default_factory=list)  # additive extension
     cost_savings: Optional[Dict[str, Any]] = None  # additive extension
     needs_review: List[str] = Field(default_factory=list)
@@ -166,6 +168,7 @@ def make_error_record(code: str, message: str, doc_type: str = "lab_report") -> 
         "diagnoses": [],
         "summary_en": None,
         "summary_ta": None,
+        "summary_hi": None,
         "needs_review": ["all"],
         "disclaimer": DISCLAIMER,
         "error": {"code": code, "message": message},
