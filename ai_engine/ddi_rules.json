@@ -1,0 +1,290 @@
+{
+  "interactions": [
+    {
+      "drug_a": "aspirin",
+      "drug_b": "clopidogrel",
+      "severity": "HIGH",
+      "category": "Antithrombotic / Antiplatelet",
+      "mechanism": "Dual antiplatelet therapy significantly increases risk of major gastrointestinal and systemic bleeding.",
+      "clinical_advice": "Concurrent use requires close clinical monitoring for signs of bleeding, bruising, or black tarry stools. Consider gastric protection (PPI).",
+      "advice_ta": "இரண்டு இரத்த உறைதல் தடுப்பு மருந்துகளை ஒன்றாக எடுக்கும்போது இரத்தப்போக்கு ஆபத்து அதிகம். கருப்பு மலம் அல்லது காயங்கள் ஏற்பட்டால் உடனே மருத்துவரை அணுகவும்."
+    },
+    {
+      "drug_a": "aspirin",
+      "drug_b": "warfarin",
+      "severity": "SEVERE",
+      "category": "Anticoagulant / Antiplatelet",
+      "mechanism": "Synergistic inhibition of platelet aggregation and coagulation factors produces severe hemorrhage risk.",
+      "clinical_advice": "Combination generally avoided unless explicitly indicated (e.g., mechanical heart valve). Requires frequent INR monitoring.",
+      "advice_ta": "கடுமையான இரத்தப்போக்கு அபாயம். மருத்துவரின் தீவிர கண்காணிப்பு மற்றும் இரத்தப் பரிசோதனை (INR) இன்றி ஒன்றாக எடுக்கக் கூடாது."
+    },
+    {
+      "drug_a": "clopidogrel",
+      "drug_b": "warfarin",
+      "severity": "SEVERE",
+      "category": "Anticoagulant / Antiplatelet",
+      "mechanism": "Severe synergistic bleeding risk.",
+      "clinical_advice": "High bleeding risk; monitor hemoglobin and signs of bleeding.",
+      "advice_ta": "கடுமையான இரத்தப்போக்கு அபாயம். எச்சரிக்கை தேவை."
+    },
+    {
+      "drug_a": "atorvastatin",
+      "drug_b": "clarithromycin",
+      "severity": "HIGH",
+      "category": "Statin / CYP3A4 Inhibitor",
+      "mechanism": "Clarithromycin potent CYP3A4 inhibition increases atorvastatin exposure by up to 4-fold, heightening risk of rhabdomyolysis and myopathy.",
+      "clinical_advice": "Temporarily suspend atorvastatin during macrolide therapy or switch to non-CYP3A4 statin (rosuvastatin / pravastatin).",
+      "advice_ta": "கிளாரித்ரோமைசின் ஸ்டாடின் அளவை அதிகரித்து கடுமையான தசை வலி மற்றும் தசைச் சிதைவை ஏற்படுத்தலாம். மருத்துவர் வழிகாட்டுதல் தேவை."
+    },
+    {
+      "drug_a": "atorvastatin",
+      "drug_b": "erythromycin",
+      "severity": "HIGH",
+      "category": "Statin / CYP3A4 Inhibitor",
+      "mechanism": "Erythromycin inhibits CYP3A4 metabolism of atorvastatin, increasing serum concentrations and myopathy risk.",
+      "clinical_advice": "Use alternative antibiotic or temporarily hold atorvastatin.",
+      "advice_ta": "எரித்ரோமைசின் ஸ்டாடின் அளவை உயர்த்தும். தசை வலி ஏற்பட்டால் உடனே தெரிவிக்கவும்."
+    },
+    {
+      "drug_a": "atorvastatin",
+      "drug_b": "fluconazole",
+      "severity": "HIGH",
+      "category": "Statin / Antifungal",
+      "mechanism": "Fluconazole inhibits CYP3A4/CYP2C9, raising statin levels and risk of hepatotoxicity and rhabdomyolysis.",
+      "clinical_advice": "Monitor LFTs and muscle enzymes; consider statin dose reduction.",
+      "advice_ta": "கல்லீரல் மற்றும் தசை பாதிப்பு அபாயம். மருத்துவரின் ஆலோசனைப்படி அளவை சரிசெய்யவும்."
+    },
+    {
+      "drug_a": "metformin",
+      "drug_b": "contrast_media",
+      "severity": "HIGH",
+      "category": "Biguanide / Radiographic Agent",
+      "mechanism": "Iodinated radiocontrast can cause acute kidney injury, causing metformin accumulation and life-threatening lactic acidosis.",
+      "clinical_advice": "Discontinue metformin 48 hours prior to contrast imaging and resume only 48 hours post-procedure after confirming normal renal function.",
+      "advice_ta": "கான்ட்ராஸ்ட் ஸ்கேன் பரிசோதனைக்கு 48 மணி நேரத்திற்கு முன் மெட்பார்மினை நிறுத்த வேண்டும். சிறுநீரகப் பரிசோதனைக்குப் பிறகே மீண்டும் தொடங்கவும்."
+    },
+    {
+      "drug_a": "ramipril",
+      "drug_b": "spironolactone",
+      "severity": "MODERATE",
+      "category": "ACE Inhibitor / Potassium-sparing Diuretic",
+      "mechanism": "Both agents decrease renal potassium excretion, risking dangerous hyperkalemia.",
+      "clinical_advice": "Routinely monitor serum potassium and creatinine within 1-2 weeks of initiation and dose changes.",
+      "advice_ta": "இரத்தத்தில் பொட்டாசியம் அளவு ஆபத்தான அளவுக்கு உயரக்கூடும். சீரான இடைவெளியில் இரத்தப் பரிசோதனை செய்ய வேண்டும்."
+    },
+    {
+      "drug_a": "enalapril",
+      "drug_b": "spironolactone",
+      "severity": "MODERATE",
+      "category": "ACE Inhibitor / Potassium-sparing Diuretic",
+      "mechanism": "Additive hyperkalemic effect.",
+      "clinical_advice": "Monitor serum potassium levels.",
+      "advice_ta": "பொட்டாசியம் அளவு அதிகரிக்க வாய்ப்புள்ளது. பரிசோதனை அவசியம்."
+    },
+    {
+      "drug_a": "losartan",
+      "drug_b": "spironolactone",
+      "severity": "MODERATE",
+      "category": "ARB / Potassium-sparing Diuretic",
+      "mechanism": "Additive potassium retention risking cardiac arrhythmias.",
+      "clinical_advice": "Monitor serum potassium and renal function.",
+      "advice_ta": "இதயத் துடிப்பை பாதிக்கும் அளவுக்கு பொட்டாசியம் அதிகரிக்கலாம். கவனம் தேவை."
+    },
+    {
+      "drug_a": "telmisartan",
+      "drug_b": "spironolactone",
+      "severity": "MODERATE",
+      "category": "ARB / Potassium-sparing Diuretic",
+      "mechanism": "Concurrent use risks hyperkalemia.",
+      "clinical_advice": "Monitor electrolytes regularly.",
+      "advice_ta": "பொட்டாசியம் பரிசோதனை செய்து கொள்வது நல்லது."
+    },
+    {
+      "drug_a": "sildenafil",
+      "drug_b": "nitroglycerin",
+      "severity": "SEVERE",
+      "category": "PDE5 Inhibitor / Nitrate",
+      "mechanism": "Excessive cGMP accumulation leads to profound, potentially fatal systemic vasodilation and hypotension.",
+      "clinical_advice": "Strictly contraindicated. Concomitant administration must be avoided at all times.",
+      "advice_ta": "முற்றிலும் தடைசெய்யப்பட்ட மருந்து சேர்க்கை! இரத்த அழுத்தம் மிகக் கடுமையாக குறைந்து உயிருக்கே ஆபத்தாகலாம்."
+    },
+    {
+      "drug_a": "sildenafil",
+      "drug_b": "isosorbide",
+      "severity": "SEVERE",
+      "category": "PDE5 Inhibitor / Nitrate",
+      "mechanism": "Synergistic nitrate-mediated hypotensive collapse.",
+      "clinical_advice": "Strictly contraindicated.",
+      "advice_ta": "இரத்த அழுத்தம் மிகக் கடுமையாகக் குறையும். இந்த மருந்துகளை ஒன்றாக உட்கொள்ளக் கூடாது."
+    },
+    {
+      "drug_a": "levothyroxine",
+      "drug_b": "calcium_carbonate",
+      "severity": "MODERATE",
+      "category": "Thyroid Hormone / Mineral Supplement",
+      "mechanism": "Calcium forms insoluble chelates with levothyroxine in the GI tract, reducing thyroid hormone absorption by up to 30%.",
+      "clinical_advice": "Separate ingestion times by at least 4 hours.",
+      "advice_ta": "கால்சியம் மாத்திரை தைராக்ஸின் உறிஞ்சுதலைத் தடுக்கும். இரண்டிற்கும் இடையே குறைந்தது 4 மணி நேரம் இடைவெளி விடவும்."
+    },
+    {
+      "drug_a": "levothyroxine",
+      "drug_b": "ferrous_sulfate",
+      "severity": "MODERATE",
+      "category": "Thyroid Hormone / Iron Supplement",
+      "mechanism": "Ferrous iron binds levothyroxine forming a poorly soluble complex, causing hypothyroid exacerbation.",
+      "clinical_advice": "Separate ingestion times by at least 4 hours.",
+      "advice_ta": "இரும்புச்சத்து மாத்திரையை தைராக்ஸினுடன் ஒன்றாக உட்கொள்ளக் கூடாது. குறைந்தது 4 மணி நேரம் இடைவெளி தேவை."
+    },
+    {
+      "drug_a": "ciprofloxacin",
+      "drug_b": "antacid",
+      "severity": "MODERATE",
+      "category": "Fluoroquinolone / Multivalent Cation",
+      "mechanism": "Magnesium/aluminum antacids chelate fluoroquinolones, reducing antibacterial efficacy by 50-80%.",
+      "clinical_advice": "Take ciprofloxacin at least 2 hours before or 4-6 hours after antacids.",
+      "advice_ta": "அசிடிட்டி மருந்து ஆன்டிபயாடிக் வீரியத்தை பெருமளவு குறைக்கும். 2 மணி நேரம் முன்னதாகவோ அல்லது 4 மணி நேரம் பின்னரோ எடுக்கவும்."
+    },
+    {
+      "drug_a": "ciprofloxacin",
+      "drug_b": "theophylline",
+      "severity": "HIGH",
+      "category": "Fluoroquinolone / Methylxanthine",
+      "mechanism": "Ciprofloxacin inhibits CYP1A2 hepatic metabolism of theophylline, inducing theophylline toxicity (seizures, tachycardia).",
+      "clinical_advice": "Monitor serum theophylline levels; consider 50% dose reduction.",
+      "advice_ta": "தியோஃபிலின் நச்சுத்தன்மை ஏற்பட்டு வலிப்பு அல்லது படபடப்பு வரலாம். மருத்துவரிடம் ஆலோசிக்கவும்."
+    },
+    {
+      "drug_a": "tramadol",
+      "drug_b": "sertraline",
+      "severity": "HIGH",
+      "category": "Opioid / SSRI",
+      "mechanism": "Dual enhancement of central 5-HT neurotransmission increases risk of life-threatening Serotonin Syndrome and lowers seizure threshold.",
+      "clinical_advice": "Avoid combination or monitor for agitation, tremor, hyperthermia, and rigidity.",
+      "advice_ta": "செரடோனின் சின்ட்ரோம் (நடுக்கம், காய்ச்சல், பதட்டம்) ஏற்படும் அபாயம் உள்ளது. மருத்துவரின் நேரடி ஆலோசனை இன்றி இணைக்கக் கூடாது."
+    },
+    {
+      "drug_a": "tramadol",
+      "drug_b": "fluoxetine",
+      "severity": "HIGH",
+      "category": "Opioid / SSRI",
+      "mechanism": "Elevated serotonin syndrome and seizure risk.",
+      "clinical_advice": "Avoid combination where possible.",
+      "advice_ta": "செரடோனின் நச்சுத்தன்மை அபாயம். மிகுந்த எச்சரிக்கை தேவை."
+    },
+    {
+      "drug_a": "digoxin",
+      "drug_b": "amiodarone",
+      "severity": "HIGH",
+      "category": "Cardiac Glycoside / Antiarrhythmic",
+      "mechanism": "Amiodarone inhibits P-glycoprotein renal and non-renal efflux of digoxin, doubling serum digoxin levels.",
+      "clinical_advice": "Reduce digoxin maintenance dose by 50% upon starting amiodarone; monitor ECG and serum digoxin.",
+      "advice_ta": "டிகாக்சின் அளவு இரட்டிப்பாகி நச்சுத்தன்மை ஏற்படலாம். மாத்திரையின் அளவைக் குறைக்க வேண்டும்."
+    },
+    {
+      "drug_a": "metoprolol",
+      "drug_b": "verapamil",
+      "severity": "HIGH",
+      "category": "Beta-Blocker / Non-DHP Calcium Channel Blocker",
+      "mechanism": "Additive depression of sinoatrial and atrioventricular nodal conduction leading to severe bradycardia, heart block, and shock.",
+      "clinical_advice": "Co-administration generally contraindicated in outpatient settings. Monitor ECG and heart rate.",
+      "advice_ta": "இதயத் துடிப்பு ஆபத்தான அளவுக்கு குறையக்கூடும் (Bradycardia). இரண்டு மருந்துகளையும் ஒரே நேரத்தில் எடுப்பது தவிர்க்கப்பட வேண்டும்."
+    },
+    {
+      "drug_a": "atenolol",
+      "drug_b": "diltiazem",
+      "severity": "HIGH",
+      "category": "Beta-Blocker / Non-DHP Calcium Channel Blocker",
+      "mechanism": "Synergistic cardiodepressant and AV nodal conduction delay.",
+      "clinical_advice": "Avoid concurrent use or monitor heart rate and blood pressure closely.",
+      "advice_ta": "இதயத் துடிப்பு மற்றும் இரத்த அழுத்தம் குறையும் ஆபத்து உள்ளது."
+    },
+    {
+      "drug_a": "ibuprofen",
+      "drug_b": "ramipril",
+      "severity": "MODERATE",
+      "category": "NSAID / ACE Inhibitor",
+      "mechanism": "NSAID-mediated renal prostaglandin inhibition blunts ACE-inhibitor antihypertensive action and precipitates acute renal failure.",
+      "clinical_advice": "Avoid chronic concurrent use. Use paracetamol for analgesia if possible; monitor renal function.",
+      "advice_ta": "வலி மாத்திரை இரத்த அழுத்த மருந்தின் செயல்திறனைக் குறைத்து சிறுநீரகத்தை பாதிக்கலாம். பாராசிட்டமால் பயன்படுத்துவது சிறந்தது."
+    },
+    {
+      "drug_a": "diclofenac",
+      "drug_b": "telmisartan",
+      "severity": "MODERATE",
+      "category": "NSAID / ARB",
+      "mechanism": "NSAIDs attenuate ARB vasodilatory effect and compromise renal hemodynamics.",
+      "clinical_advice": "Limit NSAID duration to lowest dose; monitor hydration and creatinine.",
+      "advice_ta": "வயிற்றுப் புண் மற்றும் சிறுநீரக பாதிப்பு ஏற்படலாம். குறைந்த நாட்கள் மட்டும் பயன்படுத்தவும்."
+    },
+    {
+      "drug_a": "methotrexate",
+      "drug_b": "ibuprofen",
+      "severity": "SEVERE",
+      "category": "Antimetabolite / NSAID",
+      "mechanism": "NSAIDs competitively inhibit renal tubular secretion of methotrexate, causing severe bone marrow suppression and pancytopenia.",
+      "clinical_advice": "Strictly contraindicated with high-dose methotrexate; use with extreme caution and monitoring with low-dose regimens.",
+      "advice_ta": "மிகவும் ஆபத்தான சேர்க்கை! இரத்த அணுக்கள் குறைந்து நச்சுத்தன்மை உண்டாகலாம். முற்றிலும் தவிர்க்கப்பட வேண்டும்."
+    },
+    {
+      "drug_a": "warfarin",
+      "drug_b": "ciprofloxacin",
+      "severity": "HIGH",
+      "category": "Anticoagulant / Fluoroquinolone",
+      "mechanism": "Ciprofloxacin suppresses vitamin K-producing gut flora and inhibits CYP1A2/CYP3A4, dramatically elevating INR.",
+      "clinical_advice": "Perform baseline and frequent INR checks; anticipate warfarin dose reduction.",
+      "advice_ta": "இரத்தப்போக்கு அபாயம் கணிசமாக அதிகரிக்கும். இரத்தப் பரிசோதனை (INR) அடிக்கடி தேவை."
+    }
+  ],
+  "advisories": {
+    "levothyroxine": {
+      "food_timing": "empty_stomach",
+      "schedule_advice": "Take once daily in the early morning on an empty stomach with a full glass of water, at least 30-60 minutes before tea, coffee, milk, or breakfast.",
+      "schedule_advice_ta": "காலையில் எழுந்தவுடன் வெறும் வயிற்றில் ஒரு டம்ளர் தண்ணீருடன் குடிக்கவும். காபி, டீ, பால், காலை உணவுக்கு 30-60 நிமிடங்களுக்கு முன் உட்கொள்ளவும்."
+    },
+    "thyroxine": {
+      "food_timing": "empty_stomach",
+      "schedule_advice": "Take once daily in the early morning on an empty stomach with plain water, 30-60 minutes before breakfast.",
+      "schedule_advice_ta": "காலையில் வெறும் வயிற்றில் தண்ணீரால் குடிக்கவும். காலை உணவுக்கு 30-60 நிமிடங்களுக்கு முன் எடுக்கவும்."
+    },
+    "metformin": {
+      "food_timing": "after_food",
+      "schedule_advice": "Take with or immediately after meals to reduce stomach upset and nausea.",
+      "schedule_advice_ta": "வயிற்று வலி, குமட்டலைத் தவிர்க்க உணவோடு அல்லது உணவுக்குப் பின் உடனடியாக சாப்பிடவும்."
+    },
+    "atorvastatin": {
+      "food_timing": "bedtime",
+      "schedule_advice": "Take once daily in the evening or at bedtime, as hepatic cholesterol synthesis is highest during the night.",
+      "schedule_advice_ta": "இரவில் கொலஸ்ட்ரால் உற்பத்தி அதிகம் என்பதால், இரவு உணவுக்குப் பின் அல்லது படுக்கைக்குச் செல்லும் முன் உட்கொள்ளவும்."
+    },
+    "rosuvastatin": {
+      "food_timing": "bedtime",
+      "schedule_advice": "Take once daily in the evening or night with or without food.",
+      "schedule_advice_ta": "மாலை அல்லது இரவு நேரத்தில் ஒரே நேரத்தில் தவறாமல் உட்கொள்ளவும்."
+    },
+    "pantoprazole": {
+      "food_timing": "before_food",
+      "schedule_advice": "Take once daily in the morning, 30-60 minutes before breakfast on an empty stomach.",
+      "schedule_advice_ta": "காலையில் காலை உணவுக்கு 30-60 நிமிடங்களுக்கு முன் வெறும் வயிற்றில் உட்கொள்ளவும்."
+    },
+    "omeprazole": {
+      "food_timing": "before_food",
+      "schedule_advice": "Take 30-60 minutes before your first meal of the day.",
+      "schedule_advice_ta": "காலை உணவுக்கு 30-60 நிமிடங்களுக்கு முன் வெறும் வயிற்றில் எடுக்கவும்."
+    },
+    "rabeprazole": {
+      "food_timing": "before_food",
+      "schedule_advice": "Take on an empty stomach before breakfast.",
+      "schedule_advice_ta": "காலை உணவுக்கு முன் வெறும் வயிற்றில் எடுக்கவும்."
+    },
+    "ferrous_sulfate": {
+      "food_timing": "before_food",
+      "schedule_advice": "Best absorbed on an empty stomach with vitamin C (orange/lemon juice). Avoid tea, coffee, or milk for 2 hours before and after.",
+      "schedule_advice_ta": "வைட்டமின் சி அல்லது எலுமிச்சை சாற்றுடன் எடுத்தால் நன்கு உறிஞ்சப்படும். மாத்திரை எடுத்த 2 மணி நேரத்திற்குள் டீ, காபி, பால் குடிக்கக் கூடாது."
+    },
+    "paracetamol": {
+      "food_timing": "after_food",
+      "schedule_advice": "Take with water after food. Do not exceed 4,000 mg (4 grams) per 24 hours. Avoid alcohol.",
+      "schedule_advice_ta": "உணவுக்குப் பின் தண்ணீருடன் எடுக்கவும். ஒரு நாளில் 4000 மி.கிக்கு மேல் எடுக்கக் கூடாது. மது அருந்தக் கூடாது."
+    }
+  }
+}

@@ -56,11 +56,15 @@ Medical Document (Image / PDF / Scan)
 ## 🔒 Clinical Safety & Architectural Guarantees
 
 1. **Zero Hallucination Flagging:** The LLM is strictly prohibited from computing clinical abnormal flags. Flags (`LOW`, `NORMAL`, `HIGH`, `UNKNOWN`) are computed 100% deterministically in Python against authoritative medical reference ranges indexed with LOINC codes.
-2. **Never-Raise Public Interface:** `extract_record()` will NEVER raise an unhandled exception. On any file corruption, missing file, or format error, it returns a contract-valid error record with `error={"code", "message"}`.
-3. **Multi-Model Enterprise Failover:** Google Gemini pipeline automatically transitions from primary model to candidate fallbacks (`gemini-3.5-flash`, `gemini-3.5-flash-lite`, `gemini-3.8-flash`) if rate limits or quota triggers are detected.
-4. **Offline Rule-Based Fallback:** If internet or API quotas are exhausted, localized OCR text extraction parses laboratory tests and brand names using the built-in clinical knowledge bases.
-5. **PII Masking:** Patient contact numbers, Aadhaar numbers, MRN, UHID, and patient addresses are de-identified before any text is sent to summarization models.
-6. **Guardrailed Summarization:** Keyword safety filter checks summaries for forbidden diagnostic or treatment claims (e.g., "you are diagnosed with", "you should take"). If detected, the engine instantly falls back to a deterministic, safe clinical template.
+2. **Clinical Drug-Drug Interaction (DDI) Guard:** Automatically screens prescribed medications against clinical interaction rules (e.g. Aspirin + Clopidogrel bleeding risk, Statin + Macrolide rhabdomyolysis, PDE5 + Nitrates hypotension). Alerts include severity rating (`SEVERE`, `HIGH`, `MODERATE`) and bilingual patient advice.
+3. **Food Timing & Administration Advisories:** Automatically provides evidence-based patient instructions (e.g., Levothyroxine on empty stomach 30 mins before breakfast; Metformin with meals; Statins at bedtime).
+4. **ABDM FHIR R4 Document Bundle Standard:** 1-click export of Ayushman Bharat Digital Mission (ABDM) compliant HL7 FHIR Release 4 document bundles (`Composition`, `Patient`, `DiagnosticReport`, `Observation`, `MedicationRequest`, `Condition`).
+5. **Voice Copilot (Multilingual Speech Synthesis):** Native browser and neural audio generation for English and Tamil patient summaries, empowering elderly and non-literate patients to listen to their medical instructions.
+6. **Never-Raise Public Interface:** `extract_record()` will NEVER raise an unhandled exception. On any file corruption, missing file, or format error, it returns a contract-valid error record with `error={"code", "message"}`.
+7. **Multi-Model Enterprise Failover:** Google Gemini pipeline automatically transitions from primary model to candidate fallbacks (`gemini-3.5-flash`, `gemini-3.5-flash-lite`, `gemini-3.8-flash`) if rate limits or quota triggers are detected.
+8. **Offline Rule-Based Fallback:** If internet or API quotas are exhausted, localized OCR text extraction parses laboratory tests and brand names using the built-in clinical knowledge bases.
+9. **PII Masking:** Patient contact numbers, Aadhaar numbers, MRN, UHID, and patient addresses are de-identified before any text is sent to summarization models.
+10. **Guardrailed Summarization:** Keyword safety filter checks summaries for forbidden diagnostic or treatment claims (e.g., "you are diagnosed with", "you should take"). If detected, the engine instantly falls back to a deterministic, safe clinical template.
 
 ---
 

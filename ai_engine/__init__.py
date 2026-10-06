@@ -22,11 +22,22 @@ from .cache import get_cached, set_cached
 from .extract import extract_from_file
 from .models import make_error_record, DISCLAIMER
 from .summarize import build_summaries
+from .interactions import check_drug_interactions, get_drug_advisories
+from .fhir import record_to_fhir_bundle, export_fhir_json
+from .voice import generate_audio, get_browser_speech_html
 
 logger = logging.getLogger(__name__)
 
-__all__ = ["extract_record"]
-__version__ = "0.1.0"
+__all__ = [
+    "extract_record",
+    "record_to_fhir_bundle",
+    "export_fhir_json",
+    "check_drug_interactions",
+    "get_drug_advisories",
+    "generate_audio",
+    "get_browser_speech_html",
+]
+__version__ = "0.2.0"
 
 
 def extract_record(
@@ -75,6 +86,14 @@ def extract_record(
 
         # ── Summarize ────────────────────────────────────────────────────────
         record = build_summaries(record)
+
+        # ── Clinical Drug Safety & Advisories ────────────────────────────────
+        if record.get("medicines"):
+            record["safety_alerts"] = check_drug_interactions(record["medicines"])
+            record["drug_advisories"] = get_drug_advisories(record["medicines"])
+        else:
+            record["safety_alerts"] = []
+            record["drug_advisories"] = []
 
         # ── Cache result ─────────────────────────────────────────────────────
         set_cached(file_path, record)

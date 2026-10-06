@@ -25,7 +25,7 @@
 | `lab3.jpg` | lab_report | lab_report | 3/3 | 0/0 | 0.0s | PASS |
 | `lab4.jpg` | lab_report | lab_report | 5/5 | 0/0 | 0.0s | PASS |
 | `prescription1.jpg` | prescription | prescription | 0/0 | 3/3 | 0.0s | PASS |
-| `prescription2.jpg` | prescription | prescription | 0/0 | 4/4 | 0.0s | PASS |
+| `prescription2.jpg` | prescription | prescription | 0/0 | 4/4 | 0.01s | PASS |
 | `prescription3.jpg` | prescription | prescription | 0/0 | 3/3 | 0.0s | PASS |
 | `discharge1.pdf` | discharge_summary | discharge_summary | 0/0 | 3/3 | 0.0s | PASS |
 | `discharge2.pdf` | discharge_summary | discharge_summary | 0/0 | 3/3 | 0.0s | PASS |

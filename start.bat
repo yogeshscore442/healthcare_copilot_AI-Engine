@@ -9,6 +9,7 @@ echo  ============================================================
 echo       AI HEALTH COPILOT ENGINE - Medical Document AI
 echo  ============================================================
 echo.
+echo   [W]  LAUNCH STREAMLIT WEB UI DASHBOARD (Recommended!)
 echo   [1]  Prescription images (samples)
 echo   [2]  Lab Report images (samples)
 echo   [3]  Discharge Summary PDF (samples)
@@ -22,9 +23,10 @@ echo   [0]  Exit
 echo.
 echo  ============================================================
 set "CHOICE="
-set /p CHOICE="  Enter choice (0-9): "
+set /p CHOICE="  Enter choice (W, 0-9): "
 echo.
 
+if /i "!CHOICE!"=="W" goto WEBUI
 if "!CHOICE!"=="1" goto PRESCRIPTION
 if "!CHOICE!"=="2" goto LAB
 if "!CHOICE!"=="3" goto DISCHARGE
@@ -38,6 +40,13 @@ if "!CHOICE!"=="0" goto END
 
 echo  Invalid choice. Try again.
 timeout /t 2 >nul
+goto MENU
+
+:WEBUI
+echo  Starting Streamlit Web Dashboard...
+echo  ------------------------------------------------------------
+echo  Opening in your default browser at http://localhost:8501
+streamlit run app.py
 goto MENU
 
 :PRESCRIPTION
