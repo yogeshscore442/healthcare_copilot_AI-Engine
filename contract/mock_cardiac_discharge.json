@@ -1,0 +1,144 @@
+{
+  "record_id": "a1b2c3d4-0004-0004-0004-000000000007",
+  "doc_type": "discharge_summary",
+  "doc_date": "2024-10-04",
+  "collection_date": null,
+  "follow_up_date": "2024-10-18",
+  "language": "en",
+  "patient_name_present": true,
+  "allergies": ["Aspirin"],
+  "medicines": [
+    {
+      "name_raw": "Tab Metoprolol Succinate 25 mg",
+      "generic": "Metoprolol Succinate",
+      "strength": "25 mg",
+      "schedule_raw": "1-0-1 after food",
+      "schedule_parsed": ["morning", "night"],
+      "food_instruction": "after_food",
+      "duration_days": 30,
+      "confidence": 0.96,
+      "bbox": null
+    },
+    {
+      "name_raw": "Tab Ramipril 2.5 mg",
+      "generic": "Ramipril",
+      "strength": "2.5 mg",
+      "schedule_raw": "0-0-1 after food",
+      "schedule_parsed": ["night"],
+      "food_instruction": "after_food",
+      "duration_days": 30,
+      "confidence": 0.95,
+      "bbox": null
+    },
+    {
+      "name_raw": "Tab Atorvastatin 40 mg",
+      "generic": "Atorvastatin",
+      "strength": "40 mg",
+      "schedule_raw": "0-0-1 after food",
+      "schedule_parsed": ["night"],
+      "food_instruction": "after_food",
+      "duration_days": 30,
+      "confidence": 0.97,
+      "bbox": null
+    },
+    {
+      "name_raw": "Tab Clopidogrel 75 mg",
+      "generic": "Clopidogrel",
+      "strength": "75 mg",
+      "schedule_raw": "1-0-0 after food",
+      "schedule_parsed": ["morning"],
+      "food_instruction": "after_food",
+      "duration_days": 30,
+      "confidence": 0.96,
+      "bbox": null
+    },
+    {
+      "name_raw": "Tab Pantoprazole 40 mg",
+      "generic": "Pantoprazole",
+      "strength": "40 mg",
+      "schedule_raw": "1-0-0 before food",
+      "schedule_parsed": ["morning"],
+      "food_instruction": "before_food",
+      "duration_days": 30,
+      "confidence": 0.94,
+      "bbox": null
+    },
+    {
+      "name_raw": "Tab Spironolactone 25 mg",
+      "generic": "Spironolactone",
+      "strength": "25 mg",
+      "schedule_raw": "1-0-0 after food",
+      "schedule_parsed": ["morning"],
+      "food_instruction": "after_food",
+      "duration_days": 30,
+      "confidence": 0.91,
+      "bbox": null
+    },
+    {
+      "name_raw": "Tab Furosemide 40 mg",
+      "generic": "Furosemide",
+      "strength": "40 mg",
+      "schedule_raw": "1-0-0 after food",
+      "schedule_parsed": ["morning"],
+      "food_instruction": "after_food",
+      "duration_days": 14,
+      "confidence": 0.93,
+      "bbox": null
+    }
+  ],
+  "tests": [
+    {
+      "name": "Troponin I",
+      "loinc": "89579-7",
+      "value": 2.84,
+      "value_text": null,
+      "unit": "ng/mL",
+      "ref_low": null,
+      "ref_high": 0.04,
+      "flag": "HIGH",
+      "explanation_en": "Your Troponin I (2.84 ng/mL) is significantly above the normal limit (< 0.04 ng/mL). Elevated troponin indicates heart muscle damage. This result was used to confirm the diagnosis of Acute Myocardial Infarction. Please continue all medications as prescribed.",
+      "explanation_ta": null,
+      "confidence": 0.98,
+      "bbox": null
+    },
+    {
+      "name": "Creatinine",
+      "loinc": "2160-0",
+      "value": 1.1,
+      "value_text": null,
+      "unit": "mg/dL",
+      "ref_low": 0.6,
+      "ref_high": 1.2,
+      "flag": "NORMAL",
+      "explanation_en": "Your Creatinine (1.1 mg/dL) is within the normal range (0.6–1.2 mg/dL).",
+      "explanation_ta": null,
+      "confidence": 0.96,
+      "bbox": null
+    },
+    {
+      "name": "Total Cholesterol",
+      "loinc": "2093-3",
+      "value": 238.0,
+      "value_text": null,
+      "unit": "mg/dL",
+      "ref_low": null,
+      "ref_high": 200.0,
+      "flag": "HIGH",
+      "explanation_en": "Your Total Cholesterol (238 mg/dL) is above the desirable range (< 200 mg/dL). Please continue Atorvastatin as prescribed.",
+      "explanation_ta": null,
+      "confidence": 0.95,
+      "bbox": null
+    }
+  ],
+  "diagnoses": [
+    {"text": "Acute Myocardial Infarction", "icd10": "I21.9", "confidence": 0.97},
+    {"text": "Congestive Heart Failure", "icd10": "I50.9", "confidence": 0.88},
+    {"text": "Essential Hypertension", "icd10": "I10", "confidence": 0.95},
+    {"text": "Hypercholesterolemia", "icd10": "E78.0", "confidence": 0.90}
+  ],
+  "summary_en": "This discharge summary is for a patient admitted with Acute Myocardial Infarction (Heart Attack) with associated Congestive Heart Failure, Hypertension, and High Cholesterol. Troponin I was significantly elevated confirming the diagnosis. Seven medicines have been prescribed for heart rate control, blood pressure management, cholesterol reduction, and heart protection. Please take all medicines regularly as directed and attend the follow-up appointment on 2024-10-18. Do not stop any medicine without consulting your doctor. If you experience chest pain, breathlessness, or swelling of legs, seek immediate medical attention.",
+  "summary_ta": null,
+  "needs_review": ["tests[0]", "tests[2]"],
+  "disclaimer": "This is AI-generated information to help you understand your records. It is not a diagnosis or medical advice. Please consult your doctor.",
+  "error": null
+}

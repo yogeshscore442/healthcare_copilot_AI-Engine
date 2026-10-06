@@ -1,0 +1,89 @@
+{
+  "record_id": "a1b2c3d4-0003-0003-0003-000000000006",
+  "doc_type": "prescription",
+  "doc_date": "2024-10-03",
+  "collection_date": null,
+  "follow_up_date": "2024-11-03",
+  "language": "mixed",
+  "patient_name_present": true,
+  "allergies": ["Sulfa drugs", "Penicillin"],
+  "medicines": [
+    {
+      "name_raw": "Tab Thyronorm 50 mcg",
+      "generic": "Levothyroxine",
+      "strength": "50 mcg",
+      "schedule_raw": "1-0-0 before food, empty stomach",
+      "schedule_parsed": ["morning"],
+      "food_instruction": "before_food",
+      "duration_days": 30,
+      "confidence": 0.97,
+      "bbox": [0.04, 0.40, 0.92, 0.05]
+    },
+    {
+      "name_raw": "Tab Rosulip 10",
+      "generic": "Rosuvastatin",
+      "strength": "10 mg",
+      "schedule_raw": "0-0-1 after food",
+      "schedule_parsed": ["night"],
+      "food_instruction": "after_food",
+      "duration_days": 30,
+      "confidence": 0.95,
+      "bbox": [0.04, 0.47, 0.92, 0.05]
+    },
+    {
+      "name_raw": "Tab Ecosprin 75",
+      "generic": "Aspirin",
+      "strength": "75 mg",
+      "schedule_raw": "0-0-1 after food",
+      "schedule_parsed": ["night"],
+      "food_instruction": "after_food",
+      "duration_days": 30,
+      "confidence": 0.96,
+      "bbox": [0.04, 0.54, 0.92, 0.05]
+    },
+    {
+      "name_raw": "Cap Pan-D",
+      "generic": "Pantoprazole + Domperidone",
+      "strength": null,
+      "schedule_raw": "1-0-0 before food",
+      "schedule_parsed": ["morning"],
+      "food_instruction": "before_food",
+      "duration_days": 14,
+      "confidence": 0.91,
+      "bbox": [0.04, 0.61, 0.92, 0.05]
+    },
+    {
+      "name_raw": "Calcirol 60K sachet",
+      "generic": "Cholecalciferol (Vitamin D3)",
+      "strength": "60000 IU",
+      "schedule_raw": "once weekly after food",
+      "schedule_parsed": [],
+      "food_instruction": "after_food",
+      "duration_days": 84,
+      "confidence": 0.94,
+      "bbox": [0.04, 0.68, 0.92, 0.05]
+    },
+    {
+      "name_raw": "Becosules capsule",
+      "generic": "Vitamin B Complex",
+      "strength": null,
+      "schedule_raw": "1-0-1 after food",
+      "schedule_parsed": ["morning", "night"],
+      "food_instruction": "after_food",
+      "duration_days": 30,
+      "confidence": 0.90,
+      "bbox": null
+    }
+  ],
+  "tests": [],
+  "diagnoses": [
+    {"text": "Primary Hypothyroidism", "icd10": "E03.9", "confidence": 0.95},
+    {"text": "Dyslipidemia", "icd10": "E78.5", "confidence": 0.90},
+    {"text": "Vitamin D Deficiency", "icd10": "E55.9", "confidence": 0.87}
+  ],
+  "summary_en": "This prescription lists 6 medicines for Primary Hypothyroidism, Dyslipidemia, and Vitamin D Deficiency. Thyronorm (Levothyroxine) must be taken on an empty stomach every morning. Rosulip (Rosuvastatin) is for cholesterol management. Ecosprin (Aspirin 75mg) is for cardiovascular protection. Calcirol 60K is a weekly Vitamin D supplement. Please take all medicines as directed and attend your follow-up on 2024-11-03.",
+  "summary_ta": "இந்த மருந்து சீட்டில் 6 மருந்துகள் உள்ளன. தைராய்டு, கொலஸ்ட்ரால் மற்றும் Vitamin D குறைபாட்டிற்காக இந்த மருந்துகள் பரிந்துரைக்கப்பட்டுள்ளன. Thyronorm காலையில் வெறும் வயிற்றில் எடுக்க வேண்டும். அனைத்து மருந்துகளையும் மருத்துவர் கூறியபடி எடுத்துக்கொள்ளவும். Follow-up தேதி: 2024-11-03.",
+  "needs_review": [],
+  "disclaimer": "This is AI-generated information to help you understand your records. It is not a diagnosis or medical advice. Please consult your doctor.",
+  "error": null
+}

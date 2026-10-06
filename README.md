@@ -84,10 +84,11 @@ Automated evaluation against 12 realistic synthetic clinical documents (`eval.py
 
 ## 📚 Trusted Datasets & Knowledge Bases Integrated
 
-- **LOINC (Logical Observation Identifiers Names and Codes):** Standardized laboratory observation mapping with SI vs conventional unit conversion factors (`ai_engine/reference_ranges.json`).
-- **WHO Essential Medicines & Indian NLEM / Jan Aushadhi:** 150+ common pharmaceutical formulations, brand-to-generic mappings, and standard strengths (`ai_engine/brands.csv`).
-- **ICD-10-CM Classification:** Clinical condition and diagnostic coding taxonomy for ABDM / FHIR harmonization (`ai_engine/icd10.json`).
-- **Standard Medical Abbreviations:** Latin & Indian prescription dosage syntax (`1-0-1`, `OD`, `BD`, `TDS`, `QID`, `HS`, `SOS`, `before_food`, `after_food`).
+- **LOINC (Logical Observation Identifiers Names and Codes):** 70+ laboratory parameters covering Hematology (CBC), Renal/Kidney (KFT), Liver Function (LFT), Lipid Profile, Thyroid Panel, Electrolytes, Glycemic/Diabetes, Cardiac Enzymes, Urinalysis, and Inflammatory Markers (`ai_engine/reference_ranges.json`).
+- **Comprehensive Test Aliases:** 60+ variations and OCR misspellings mapped to canonical test keys (`ai_engine/aliases.json`).
+- **WHO Essential Medicines & Indian NLEM / Jan Aushadhi:** 360+ common pharmaceutical formulations, brand-to-generic mappings, and standard strengths spanning cardiology, endocrinology, neurology, gastroenterology, antibiotics, analgesics, and respiratory medicines (`ai_engine/brands.csv`).
+- **ICD-10-CM Classification:** 130+ clinical condition and diagnostic coding taxonomy for ABDM / FHIR harmonization covering infectious, cardiovascular, endocrine, respiratory, renal, and oncology codes (`ai_engine/icd10.json`).
+- **Standard Medical Abbreviations:** Latin & Indian prescription dosage syntax (`1-0-1`, `OD`, `BD`, `TDS`, `QID`, `HS`, `SOS`, `before_food`, `after_food`, `empty_stomach`).
 
 ---
 
@@ -115,7 +116,15 @@ USE_MOCK_AI=false
 DISABLE_CACHE=false
 ```
 
-### 3. Running Extraction via CLI
+### 3. Interactive CLI Launcher (Windows)
+
+Simply double-click or run `start.bat` for an interactive menu:
+```bat
+start.bat
+```
+Supports one-click execution of sample prescriptions, lab reports, discharge summaries, Tamil bilingual tests, custom file path processing, full evaluation, and test suites.
+
+### 4. Running Extraction via CLI
 
 ```bash
 # Extract a laboratory report
@@ -131,14 +140,14 @@ python -m ai_engine.cli samples/discharge1.pdf --mime application/pdf
 python -m ai_engine.cli samples/tamil_mixed1.jpg --lang ta
 ```
 
-### 4. Running the Test Suite
+### 5. Running the Test Suite
 
 ```bash
-# Run all unit tests
+# Run all 134 unit tests
 pytest tests/ -v
 ```
 
-### 5. Running the Batch Evaluation Pipeline
+### 6. Running the Batch Evaluation Pipeline
 
 ```bash
 # Evaluate against all 12 ground truth files

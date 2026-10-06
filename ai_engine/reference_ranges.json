@@ -1,5 +1,5 @@
 {
-  "_comment": "Authoritative Reference Ranges based on LOINC and Standard Clinical Pathology Laboratory Guidelines (WHO, IFCC, NABL). LLM never sets clinical flags; flags are computed deterministically in code.",
+  "_comment": "Authoritative Reference Ranges — v2.0 based on LOINC and Standard Clinical Pathology Laboratory Guidelines (WHO, IFCC, NABL). Expanded with ferritin, folate, hormones, cardiac biomarkers, coagulation, CBC differentials, iron studies, immunology, infectious disease serology, and more.",
   "tests": {
     "hba1c": {
       "aliases": [
@@ -611,6 +611,768 @@
       ],
       "ref_low": 200.0,
       "ref_high": 900.0
+    },
+    "ferritin_male": {
+      "aliases": [
+        "ferritin",
+        "serum ferritin",
+        "s. ferritin"
+      ],
+      "loinc": "2276-4",
+      "unit": "ng/mL",
+      "unit_aliases": [
+        "ng/ml",
+        "ug/l",
+        "mcg/l"
+      ],
+      "ref_low": 12.0,
+      "ref_high": 300.0,
+      "sex": "M"
+    },
+    "ferritin_female": {
+      "aliases": [
+        "ferritin",
+        "serum ferritin",
+        "s. ferritin"
+      ],
+      "loinc": "2276-4",
+      "unit": "ng/mL",
+      "unit_aliases": [
+        "ng/ml",
+        "ug/l",
+        "mcg/l"
+      ],
+      "ref_low": 12.0,
+      "ref_high": 150.0,
+      "sex": "F"
+    },
+    "folate": {
+      "aliases": [
+        "folate",
+        "folic acid",
+        "serum folate",
+        "vitamin b9",
+        "serum folic acid"
+      ],
+      "loinc": "2132-9",
+      "unit": "ng/mL",
+      "unit_aliases": [
+        "ng/ml",
+        "nmol/l"
+      ],
+      "ref_low": 3.0,
+      "ref_high": 17.0
+    },
+    "prolactin": {
+      "aliases": [
+        "prolactin",
+        "serum prolactin",
+        "prl"
+      ],
+      "loinc": "2842-3",
+      "unit": "ng/mL",
+      "unit_aliases": [
+        "ng/ml",
+        "miu/l"
+      ],
+      "ref_low": 2.0,
+      "ref_high": 18.0
+    },
+    "lh": {
+      "aliases": [
+        "lh",
+        "luteinizing hormone",
+        "lutenizing hormone",
+        "serum lh"
+      ],
+      "loinc": "10501-5",
+      "unit": "mIU/mL",
+      "unit_aliases": [
+        "miu/ml",
+        "iu/l"
+      ],
+      "ref_low": 1.5,
+      "ref_high": 9.3
+    },
+    "fsh": {
+      "aliases": [
+        "fsh",
+        "follicle stimulating hormone",
+        "follicle-stimulating hormone",
+        "serum fsh"
+      ],
+      "loinc": "15067-2",
+      "unit": "mIU/mL",
+      "unit_aliases": [
+        "miu/ml",
+        "iu/l"
+      ],
+      "ref_low": 1.5,
+      "ref_high": 12.4
+    },
+    "cortisol": {
+      "aliases": [
+        "cortisol",
+        "serum cortisol",
+        "morning cortisol",
+        "fasting cortisol"
+      ],
+      "loinc": "2143-6",
+      "unit": "mcg/dL",
+      "unit_aliases": [
+        "mcg/dl",
+        "ug/dl",
+        "nmol/l"
+      ],
+      "ref_low": 5.0,
+      "ref_high": 25.0
+    },
+    "psa": {
+      "aliases": [
+        "psa",
+        "prostate specific antigen",
+        "total psa",
+        "serum psa"
+      ],
+      "loinc": "2857-1",
+      "unit": "ng/mL",
+      "unit_aliases": [
+        "ng/ml"
+      ],
+      "ref_low": 0.0,
+      "ref_high": 4.0
+    },
+    "insulin_fasting": {
+      "aliases": [
+        "fasting insulin",
+        "serum insulin",
+        "insulin",
+        "insulin fasting"
+      ],
+      "loinc": "20448-7",
+      "unit": "mcIU/mL",
+      "unit_aliases": [
+        "mciu/ml",
+        "uiu/ml",
+        "pmol/l"
+      ],
+      "ref_low": 2.0,
+      "ref_high": 25.0
+    },
+    "homa_ir": {
+      "aliases": [
+        "homa ir",
+        "homa-ir",
+        "insulin resistance index"
+      ],
+      "loinc": "85354-9",
+      "unit": "ratio",
+      "unit_aliases": [],
+      "ref_low": null,
+      "ref_high": 2.5
+    },
+    "troponin_i": {
+      "aliases": [
+        "troponin i",
+        "troponin",
+        "cardiac troponin",
+        "hs troponin i",
+        "high sensitivity troponin i",
+        "ctni"
+      ],
+      "loinc": "89579-7",
+      "unit": "ng/mL",
+      "unit_aliases": [
+        "ng/ml",
+        "pg/ml"
+      ],
+      "ref_low": null,
+      "ref_high": 0.04
+    },
+    "troponin_t": {
+      "aliases": [
+        "troponin t",
+        "hs troponin t",
+        "high sensitivity troponin t",
+        "ctnt"
+      ],
+      "loinc": "67151-1",
+      "unit": "ng/mL",
+      "unit_aliases": [
+        "ng/ml",
+        "pg/ml"
+      ],
+      "ref_low": null,
+      "ref_high": 0.01
+    },
+    "d_dimer": {
+      "aliases": [
+        "d-dimer",
+        "d dimer",
+        "fibrin degradation product"
+      ],
+      "loinc": "48066-5",
+      "unit": "mg/L FEU",
+      "unit_aliases": [
+        "mg/l",
+        "ug/ml",
+        "ng/ml"
+      ],
+      "ref_low": null,
+      "ref_high": 0.5
+    },
+    "bnp": {
+      "aliases": [
+        "bnp",
+        "brain natriuretic peptide",
+        "b-type natriuretic peptide"
+      ],
+      "loinc": "30934-4",
+      "unit": "pg/mL",
+      "unit_aliases": [
+        "pg/ml"
+      ],
+      "ref_low": null,
+      "ref_high": 100.0
+    },
+    "nt_probnp": {
+      "aliases": [
+        "nt-probnp",
+        "nt probnp",
+        "n-terminal pro b-type natriuretic peptide"
+      ],
+      "loinc": "33762-6",
+      "unit": "pg/mL",
+      "unit_aliases": [
+        "pg/ml"
+      ],
+      "ref_low": null,
+      "ref_high": 125.0
+    },
+    "urine_microalbumin": {
+      "aliases": [
+        "microalbumin",
+        "urine microalbumin",
+        "microalbuminuria",
+        "albumin urine",
+        "spot urine albumin"
+      ],
+      "loinc": "14957-5",
+      "unit": "mg/L",
+      "unit_aliases": [
+        "mg/l",
+        "mg/g"
+      ],
+      "ref_low": null,
+      "ref_high": 30.0
+    },
+    "urine_creatinine": {
+      "aliases": [
+        "urine creatinine",
+        "spot urine creatinine",
+        "cr urine"
+      ],
+      "loinc": "2161-8",
+      "unit": "mg/dL",
+      "unit_aliases": [
+        "mg/dl"
+      ],
+      "ref_low": 30.0,
+      "ref_high": 300.0
+    },
+    "magnesium": {
+      "aliases": [
+        "magnesium",
+        "serum magnesium",
+        "mg",
+        "mg2+"
+      ],
+      "loinc": "2593-2",
+      "unit": "mg/dL",
+      "unit_aliases": [
+        "mg/dl",
+        "mmol/l",
+        "meq/l"
+      ],
+      "ref_low": 1.7,
+      "ref_high": 2.2
+    },
+    "phosphorus": {
+      "aliases": [
+        "phosphorus",
+        "phosphate",
+        "serum phosphorus",
+        "serum phosphate",
+        "inorganic phosphate"
+      ],
+      "loinc": "2777-1",
+      "unit": "mg/dL",
+      "unit_aliases": [
+        "mg/dl",
+        "mmol/l"
+      ],
+      "ref_low": 2.5,
+      "ref_high": 4.5
+    },
+    "iron": {
+      "aliases": [
+        "iron",
+        "serum iron",
+        "s. iron"
+      ],
+      "loinc": "2498-4",
+      "unit": "mcg/dL",
+      "unit_aliases": [
+        "mcg/dl",
+        "ug/dl",
+        "umol/l"
+      ],
+      "ref_low": 60.0,
+      "ref_high": 170.0
+    },
+    "tibc": {
+      "aliases": [
+        "tibc",
+        "total iron binding capacity",
+        "serum tibc"
+      ],
+      "loinc": "2501-5",
+      "unit": "mcg/dL",
+      "unit_aliases": [
+        "mcg/dl",
+        "ug/dl"
+      ],
+      "ref_low": 250.0,
+      "ref_high": 370.0
+    },
+    "transferrin_saturation": {
+      "aliases": [
+        "transferrin saturation",
+        "tsat",
+        "iron saturation"
+      ],
+      "loinc": "2502-3",
+      "unit": "%",
+      "unit_aliases": [
+        "%",
+        "percent"
+      ],
+      "ref_low": 20.0,
+      "ref_high": 50.0
+    },
+    "ldh": {
+      "aliases": [
+        "ldh",
+        "lactate dehydrogenase",
+        "lactic dehydrogenase",
+        "serum ldh"
+      ],
+      "loinc": "2532-0",
+      "unit": "U/L",
+      "unit_aliases": [
+        "u/l",
+        "iu/l"
+      ],
+      "ref_low": 140.0,
+      "ref_high": 280.0
+    },
+    "ck": {
+      "aliases": [
+        "ck",
+        "creatine kinase",
+        "creatine phosphokinase",
+        "cpk",
+        "total ck"
+      ],
+      "loinc": "2157-6",
+      "unit": "U/L",
+      "unit_aliases": [
+        "u/l",
+        "iu/l"
+      ],
+      "ref_low": 30.0,
+      "ref_high": 200.0
+    },
+    "ggt": {
+      "aliases": [
+        "ggt",
+        "gamma glutamyl transferase",
+        "gamma gt",
+        "gamma-gt"
+      ],
+      "loinc": "2324-2",
+      "unit": "U/L",
+      "unit_aliases": [
+        "u/l",
+        "iu/l"
+      ],
+      "ref_low": 9.0,
+      "ref_high": 48.0
+    },
+    "amylase": {
+      "aliases": [
+        "amylase",
+        "serum amylase",
+        "s. amylase"
+      ],
+      "loinc": "1798-8",
+      "unit": "U/L",
+      "unit_aliases": [
+        "u/l",
+        "iu/l"
+      ],
+      "ref_low": 28.0,
+      "ref_high": 100.0
+    },
+    "lipase": {
+      "aliases": [
+        "lipase",
+        "serum lipase"
+      ],
+      "loinc": "3040-3",
+      "unit": "U/L",
+      "unit_aliases": [
+        "u/l",
+        "iu/l"
+      ],
+      "ref_low": 10.0,
+      "ref_high": 140.0
+    },
+    "bicarbonate": {
+      "aliases": [
+        "bicarbonate",
+        "hco3",
+        "serum bicarbonate",
+        "total co2",
+        "tco2"
+      ],
+      "loinc": "1963-8",
+      "unit": "mEq/L",
+      "unit_aliases": [
+        "meq/l",
+        "mmol/l"
+      ],
+      "ref_low": 22.0,
+      "ref_high": 29.0
+    },
+    "inr": {
+      "aliases": [
+        "inr",
+        "international normalized ratio",
+        "pt inr",
+        "prothrombin time inr"
+      ],
+      "loinc": "6301-6",
+      "unit": "ratio",
+      "unit_aliases": [],
+      "ref_low": 0.8,
+      "ref_high": 1.2
+    },
+    "pt": {
+      "aliases": [
+        "pt",
+        "prothrombin time",
+        "protime",
+        "pro time"
+      ],
+      "loinc": "5902-2",
+      "unit": "seconds",
+      "unit_aliases": [
+        "sec",
+        "s"
+      ],
+      "ref_low": 11.0,
+      "ref_high": 13.5
+    },
+    "aptt": {
+      "aliases": [
+        "aptt",
+        "activated partial thromboplastin time",
+        "ptt",
+        "partial thromboplastin time"
+      ],
+      "loinc": "3173-2",
+      "unit": "seconds",
+      "unit_aliases": [
+        "sec",
+        "s"
+      ],
+      "ref_low": 25.0,
+      "ref_high": 35.0
+    },
+    "neutrophils": {
+      "aliases": [
+        "neutrophils",
+        "neutrophil count",
+        "polymorphonuclear",
+        "pmn",
+        "seg",
+        "segmented neutrophils"
+      ],
+      "loinc": "26499-4",
+      "unit": "%",
+      "unit_aliases": [
+        "%",
+        "percent"
+      ],
+      "ref_low": 40.0,
+      "ref_high": 80.0
+    },
+    "lymphocytes": {
+      "aliases": [
+        "lymphocytes",
+        "lymphocyte count",
+        "lymph count"
+      ],
+      "loinc": "26474-7",
+      "unit": "%",
+      "unit_aliases": [
+        "%",
+        "percent"
+      ],
+      "ref_low": 20.0,
+      "ref_high": 40.0
+    },
+    "eosinophils": {
+      "aliases": [
+        "eosinophils",
+        "eosinophil count",
+        "eos"
+      ],
+      "loinc": "26449-9",
+      "unit": "%",
+      "unit_aliases": [
+        "%",
+        "percent"
+      ],
+      "ref_low": 1.0,
+      "ref_high": 6.0
+    },
+    "monocytes": {
+      "aliases": [
+        "monocytes",
+        "monocyte count",
+        "mono"
+      ],
+      "loinc": "26484-6",
+      "unit": "%",
+      "unit_aliases": [
+        "%",
+        "percent"
+      ],
+      "ref_low": 2.0,
+      "ref_high": 10.0
+    },
+    "mcv": {
+      "aliases": [
+        "mcv",
+        "mean corpuscular volume",
+        "mean cell volume"
+      ],
+      "loinc": "787-2",
+      "unit": "fL",
+      "unit_aliases": [
+        "fl"
+      ],
+      "ref_low": 80.0,
+      "ref_high": 100.0
+    },
+    "mch": {
+      "aliases": [
+        "mch",
+        "mean corpuscular hemoglobin",
+        "mean cell hemoglobin"
+      ],
+      "loinc": "785-6",
+      "unit": "pg",
+      "unit_aliases": [
+        "pg"
+      ],
+      "ref_low": 27.0,
+      "ref_high": 33.0
+    },
+    "mchc": {
+      "aliases": [
+        "mchc",
+        "mean corpuscular hemoglobin concentration"
+      ],
+      "loinc": "786-4",
+      "unit": "g/dL",
+      "unit_aliases": [
+        "g/dl"
+      ],
+      "ref_low": 31.5,
+      "ref_high": 36.0
+    },
+    "rdw": {
+      "aliases": [
+        "rdw",
+        "red cell distribution width",
+        "rdw-cv"
+      ],
+      "loinc": "788-0",
+      "unit": "%",
+      "unit_aliases": [
+        "%"
+      ],
+      "ref_low": 11.5,
+      "ref_high": 14.5
+    },
+    "hba1c_diabetic_control": {
+      "aliases": [
+        "hba1c target",
+        "hba1c goal"
+      ],
+      "loinc": "4548-4",
+      "unit": "%",
+      "unit_aliases": [
+        "%"
+      ],
+      "ref_low": null,
+      "ref_high": 7.0
+    },
+    "microalbuminuria_ratio": {
+      "aliases": [
+        "acr",
+        "albumin creatinine ratio",
+        "urine acr",
+        "albumin to creatinine ratio"
+      ],
+      "loinc": "14959-1",
+      "unit": "mg/g",
+      "unit_aliases": [
+        "mg/g"
+      ],
+      "ref_low": null,
+      "ref_high": 30.0
+    },
+    "random_insulin": {
+      "aliases": [
+        "random insulin",
+        "post prandial insulin",
+        "insulin pp"
+      ],
+      "loinc": "20448-7",
+      "unit": "mcIU/mL",
+      "unit_aliases": [
+        "mciu/ml",
+        "uiu/ml"
+      ],
+      "ref_low": null,
+      "ref_high": 60.0
+    },
+    "ige_total": {
+      "aliases": [
+        "total ige",
+        "ige",
+        "serum ige",
+        "immunoglobulin e"
+      ],
+      "loinc": "19113-0",
+      "unit": "IU/mL",
+      "unit_aliases": [
+        "iu/ml",
+        "ku/l"
+      ],
+      "ref_low": null,
+      "ref_high": 100.0
+    },
+    "anti_tpo": {
+      "aliases": [
+        "anti tpo",
+        "anti-tpo",
+        "anti thyroid peroxidase",
+        "tpo antibody",
+        "thyroid peroxidase antibody"
+      ],
+      "loinc": "56740-1",
+      "unit": "IU/mL",
+      "unit_aliases": [
+        "iu/ml"
+      ],
+      "ref_low": null,
+      "ref_high": 35.0
+    },
+    "anti_tg": {
+      "aliases": [
+        "anti tg",
+        "anti-tg",
+        "anti thyroglobulin",
+        "thyroglobulin antibody",
+        "tg antibody"
+      ],
+      "loinc": "56741-9",
+      "unit": "IU/mL",
+      "unit_aliases": [
+        "iu/ml"
+      ],
+      "ref_low": null,
+      "ref_high": 40.0
+    },
+    "hiv": {
+      "aliases": [
+        "hiv",
+        "hiv 1/2",
+        "hiv antigen antibody",
+        "hiv combo test"
+      ],
+      "loinc": "75622-1",
+      "unit": "reactive/non-reactive",
+      "unit_aliases": [],
+      "ref_low": null,
+      "ref_high": null
+    },
+    "hbsag": {
+      "aliases": [
+        "hbsag",
+        "hepatitis b surface antigen",
+        "hbs antigen",
+        "hepatitis b s antigen"
+      ],
+      "loinc": "5195-3",
+      "unit": "reactive/non-reactive",
+      "unit_aliases": [],
+      "ref_low": null,
+      "ref_high": null
+    },
+    "anti_hcv": {
+      "aliases": [
+        "anti hcv",
+        "hepatitis c antibody",
+        "hcv antibody",
+        "anti hepatitis c"
+      ],
+      "loinc": "16128-1",
+      "unit": "reactive/non-reactive",
+      "unit_aliases": [],
+      "ref_low": null,
+      "ref_high": null
+    },
+    "dengue_ns1": {
+      "aliases": [
+        "dengue ns1",
+        "ns1 antigen",
+        "dengue ns1 antigen",
+        "dengue antigen"
+      ],
+      "loinc": "41461-5",
+      "unit": "reactive/non-reactive",
+      "unit_aliases": [],
+      "ref_low": null,
+      "ref_high": null
+    },
+    "malaria_rdt": {
+      "aliases": [
+        "malaria rdt",
+        "malaria antigen",
+        "rapid malaria test",
+        "malaria rapid test"
+      ],
+      "loinc": "32700-7",
+      "unit": "reactive/non-reactive",
+      "unit_aliases": [],
+      "ref_low": null,
+      "ref_high": null
     }
   }
 }
